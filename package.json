@@ -6,17 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-      "postinstall": "chmod +x node_modules/.bin/vite node_modules/@esbuild/linux-x64/bin/esbuild",
-
+    "postinstall": "chmod +x node_modules/.bin/vite node_modules/@esbuild/linux-x64/bin/esbuild",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-toastify": "^11.0.5"
+    "react-router-dom": "^7.6.0",
+    "react-toastify": "^11.0.5",
+    "toastify-js": "^1.12.0"
   },
   "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/toastify-js": "^1.12.4",
     "@vitejs/plugin-react": "^4.4.1",
     "vite": "^6.3.5"
   }
