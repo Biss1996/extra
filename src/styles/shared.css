@@ -108,11 +108,12 @@ body {
 footer {
   text-align: center;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 15px;
   color: #777;
 }
 
 footer a {
   color: #209bde;
-  text-decoration: none;
+  text-decoration: solid;
+  margin-left: 20px;
 }

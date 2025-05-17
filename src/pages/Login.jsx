@@ -42,11 +42,11 @@ const Login = () => {
       )}
 
       <main className="login-panel">
-        <h1 className="login-title">Welcome Back</h1>
+        <h1 className="login-title">WELCOME BACK</h1>
 
         <form onSubmit={handleLogin}>
           <div className="form-group">
-            <label htmlFor="email">Phone Number</label>
+            <label htmlFor="phone">Phone Number</label>
             <input type="email" id="email" name="email" required />
           </div>
 

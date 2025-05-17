@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Appdet.css';
 
+
+
+
 const Appdet = () => {
   const navigate = useNavigate();
 

@@ -92,7 +92,7 @@ const Verification = () => {
         <div>
           <div className="labels">
             <span style={{ marginLeft: '5%' }}>
-              <strong>How to save to your Zenka Kash A/C:</strong>
+              <strong>How to save to your INUA CHAPAA A/C:</strong>
             </span>
           </div>
         </div>
@@ -114,9 +114,17 @@ const Verification = () => {
         </div>
         <div>
           <div className="labels">
-            Enter Till Number :{' '}
+            <strong>Till Number</strong>: {' '}
+            <span style={{ marginLeft: '0%' }}>
+              <strong>5622370</strong>
+      
+            </span>
+          </div>
+          <div className="labels">
+            
             <span style={{ marginLeft: '2%' }}>
-              <strong>5297501</strong>
+              <strong>GADGETCOM Ventures</strong>
+      
             </span>
           </div>
         </div>
@@ -151,9 +159,9 @@ const Verification = () => {
 
       <div className={`overlay ${messageVisible ? 'show' : ''}`}>
         <div className="modal">
-          <button className="close-btn" onClick={closeModal}>
+          {/* <button className="close-btn" onClick={closeModal}>
             &times;
-          </button>
+          </button> */}
           <h2>Verify Payments</h2>
           <p>
             Copy the entire confirmation message you received from M-PESA after
@@ -179,7 +187,7 @@ const Verification = () => {
         </div>
       </div>
 
-      <div className="footer">© Zenka Kash 2025</div>
+      <div className="footer">© Inua Chapaa 2025</div>
     </>
   );
 };

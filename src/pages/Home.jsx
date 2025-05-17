@@ -74,7 +74,7 @@ const Home = () => {
   }}
 >
   <img
-    src="/playlogo.svg"
+    src="/play1.jpeg"
     alt="Play Store"
     style={{ width: "24px", height: "24px" }}
   />
@@ -82,7 +82,6 @@ const Home = () => {
 </button>
 
       </header>
-
       <section className="section" style={{ textAlign: "center" }}>
         <h2>Need Cash Fast?</h2>
         <p>
@@ -109,7 +108,6 @@ const Home = () => {
             <p>Reach out to our support team anytime via the app.</p>
           </div>
         </div>
-
         <h2>What Our Users Say</h2>
         <div className="testimonials">
           <div className="testimonial">
@@ -126,9 +124,9 @@ const Home = () => {
         <p>Join thousands of users who trust INUA CHAPAA for emergency and instant loans.</p>
         <button
           className="cta-button"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/Login")}
         >
-          Go to Login
+          Apply Now!
         </button>
 
         <footer>

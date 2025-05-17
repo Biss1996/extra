@@ -1,12 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Signup.css';
+import '../styles/shared.css';
+import '../styles/main.css';
 
 const Signup = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form submitted");
     // You can collect form data here if needed
     navigate("/otherdetails");
   };
@@ -32,7 +35,7 @@ const Signup = () => {
         <div className="preloader-text">Loading, please wait...</div>
       </div>
 
-      <header>
+      {/* <header>
         <nav className="navbar">
           <div className="logo">Zenka Kash</div>
           <ul className="nav-links" id="nav-links">
@@ -47,12 +50,12 @@ const Signup = () => {
             <span></span>
           </div>
         </nav>
-      </header>
+      </header> */}
 
       <div className="main-container">
         {/* Left Section */}
         <div className="left-content">
-          <h1>Zenka <br /> Kash</h1>
+          <h1>INUA  <br /> CHAPAA</h1>
           <p>
             Let us help you manage your finances effortlessly.
             Get a loan for business, personal needs, emergencies, or more.
@@ -89,8 +92,13 @@ const Signup = () => {
               <option value="Car">Married</option>
               <option value="Business">Divorced</option>
             </select>
-            <button type="submit">Next</button>
-          </form>
+            <button
+        type="submit"
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Next
+      </button>
+    </form>
 
           <p className="note">
             No CRB Check. No Guarantors. Disbursed to MPESA. No Paperwork.
@@ -102,7 +110,7 @@ const Signup = () => {
       </div>
 
       <footer>
-        <p>© 2025 Zenka Kash. All rights reserved. <a href="/">Home</a></p>
+        <p>© 2025 Inua Chapaa. All rights reserved. <a href="/">Home</a><a href="/login">Login</a></p>
       </footer>
     </>
   );

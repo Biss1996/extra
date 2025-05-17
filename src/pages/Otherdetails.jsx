@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Otherdetails.css";
+import '../styles/main.css';
+import '../styles/shared.css';
 
 const OtherDetails = () => {
   const navigate = useNavigate();

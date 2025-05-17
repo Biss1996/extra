@@ -37,24 +37,28 @@ const Eligibilitycheck = () => {
   }, []);
 
   const nextPage = () => {
-    setGifSrc('assets/process.gif');
-    setTimeout(() => {
-      navigate('/savings'); // Navigate to Savings.jsx
-    }, 5000);
+     setGifSrc('/assets/process.gif'); // ✅ correct path
+  setTimeout(() => {
+    navigate('/savings');
+  }, 5000);
   };
 
   return (
+  <div className="page-wrapper">
+    <div className="left-content">
+      <h1>INUA  <br /> CHAPAA</h1>
+      <p>
+        Let us help you manage your finances effortlessly.
+        Get a loan for business, personal needs, emergencies, or more.
+      </p>
+    </div>
     <div className="container">
       <h1 className="wait-heading">Please wait...</h1>
-
       <div className="gif-container">
         <img src={gifSrc} alt="Authorization GIF" />
       </div>
-
       <div className="timer">{statusText}</div>
-
       <h4 className="eligibility-label">{eligibilityMessage}</h4>
-
       <div className="buttons">
         {buttonVisible && (
           <button id="continueBtn" onClick={nextPage}>
@@ -63,7 +67,7 @@ const Eligibilitycheck = () => {
         )}
       </div>
     </div>
-  );
-};
-
+  </div>
+);
+}
 export default Eligibilitycheck;

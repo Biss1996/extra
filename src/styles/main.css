@@ -1,14 +1,16 @@
 /* Apply Background Image with Overlay */
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(100, 210, 9, 0.717), rgba(63, 9, 210, 0.872)),
     url("loanback.jpg") no-repeat center center/cover;
   min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
-  margin: 0;
-  padding: 0;
+ 
+  margin-bottom: 100px;
+  
 }
 
 /* Main Container Layout */
@@ -18,7 +20,7 @@ body {
   width: 100%;
   max-width: 1200px;
   align-items: center;
-  gap: 40px;
+  gap: 0px;
   padding: 60px; /* Increase padding for better spacing */
   margin-top: 40px;
   margin: 40px 0; /* Add space from top and bottom */
@@ -30,19 +32,20 @@ body {
   flex-direction: column;
   justify-content: flex-end; /* Align content towards the bottom */
   padding: 20px;
-  height: 100%; /* Ensure the section takes full height */
+  height: 10%; /* Ensure the section takes full height */
 }
 
 .left-content h1 {
-  font-size: 48px;
-  color: white;
-  margin-bottom: 15px;
-  font-weight: bold;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1px;
+  font-weight:bolder;
+  font-style:unset;
 }
 
 .left-content p {
   font-size: 18px;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top: 25px;
   margin-bottom: 25px;
   line-height: 1.6;
@@ -59,7 +62,7 @@ body {
   margin-top: 40px;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.539); /* Subtle shadow for depth */
   width: 100%;
   max-width: 450px; /* Limit max width for better readability */
 }
@@ -76,7 +79,7 @@ body {
 .form-wrapper h3 {
   font-size: 18px;
   margin-bottom: 30px;
-  color: #555;
+  color: #000000;
   text-align: center;
 }
 
@@ -86,9 +89,9 @@ select {
   width: 100%;
   padding: 14px;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 8px;
-  background-color: #fafafa;
+  background-color: #4f4f4f;
   font-size: 16px;
   transition: border-color 0.3s;
 }
@@ -97,7 +100,7 @@ input:focus,
 select:focus {
   border-color: #209bde;
   outline: none;
-  background-color: #f1f1f1;
+  background-color: #898989;
 }
 
 /* Button Styling */
@@ -111,7 +114,7 @@ button {
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
-  transition: background 0.3s, transform 0.1s ease-in-out;
+  transition:  0.3s, transform 0.1s ease-in-out;
 }
 
 button:hover {
@@ -123,7 +126,7 @@ button:hover {
 .note {
   margin-top: 10px;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #ff000071;
   border-radius: 8px;
   background-color: #f9f9f9;
   font-size: 14px;

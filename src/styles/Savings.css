@@ -7,7 +7,6 @@
 }
 
 body {
-  background: linear-gradient(135deg, #00ff59, #206f83);
   min-height: 100vh;
   padding: 1rem;
 }
@@ -15,10 +14,11 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: linear-gradient(135deg, #00ff59, #206f83);
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgb(255, 0, 0);
+  padding: 1.9rem;
+  margin-top: 250px;
 }
 
 h1 {
@@ -68,7 +68,7 @@ h1 {
 .savings-amount {
   font-size: 1rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #1f372a;
 }
 
 .loan-limit {
@@ -83,7 +83,7 @@ h1 {
   background: #f3f0ff;
   border-radius: 8px;
   font-size: 0.875rem;
-  color: #180f46;
+  color: #0c0338;
   text-align: center;
 }
 

@@ -1,21 +1,18 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ React Router imports
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./styles/App.css";
 
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Eligibilitycheck from './pages/Eligibilitycheck';
-import Home from './pages/Home';
-import LoanEligibility from './pages/LoanEligibility';
+import './App.css';
+import Home from './pages/Home.jsx';
+import Login from './pages/Login.jsx';
+import Signup from './pages/Signup'; 
 import Otherdetails from './pages/Otherdetails';
+import Eligibilitycheck from './pages/Eligibilitycheck';
 import Savings from './pages/Savings';
-import Verification from './pages/Verification';
 import Appdet from './pages/Appdet';
+import Verification from './pages/Verification';
 import Review from './pages/Review';
-
-
 
 
 
@@ -47,30 +44,30 @@ export default function App() {
       });
     }, 7000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Cleanup
   }, []);
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 text-gray-800">
+      <div className="min-h-screen bg-gray-100 text-gray-800">
+        {/* <h1 className="text-3xl font-bold p-6">INUA CHAPAA - Live Loan Updates</h1> */}
+
+        {/* Render routed pages here */}
         <Routes>
-          <Route path="/review" element={<Review />} />
-
-          <Route path="/savings" element={<Savings />} />
-          <Route path="/verification" element={<Verification />} />
-
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/eligibilitycheck" element={<Eligibilitycheck />} />
           <Route path="/" element={<Home />} />
-          <Route path="/loanEligibility" element={<LoanEligibility />} />
-          <Route path="/otherdetails" element={<Otherdetails />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/appdet" element={<Appdet />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/savings" element={<Savings />} />
 
-
-
+          <Route path="/otherdetails" element={<Otherdetails />} />
+          <Route path="/verification" element={<Verification />} />
+          <Route path="/review" element={<Review />} />
 
         </Routes>
+
+        {/* Toast Container */}
         <ToastContainer transition={Slide} />
       </div>
     </Router>
