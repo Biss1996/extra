@@ -6,17 +6,17 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #019a22;
 }
 
 .loan-message h1 {
-  color: #2e7d32;
+  color: #000000;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .loan-message h2 {
-  color: #555;
+  color: #000000;
   font-size: 16px;
   margin-bottom: 15px;
 }
@@ -29,13 +29,13 @@
 
 .loan-message h4#limit {
   font-size: 22px;
-  color: #0d47a1;
+  color: #017c2e;
 }
 
 .loan-table,
 .loan-tabless {
   margin-top: 25px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #000000;
   padding-top: 20px;
 }
 
@@ -53,16 +53,16 @@
 
 strong {
   font-weight: bold;
-  color: #000;
+  color: #000000;
 }
 
 .verify-button {
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: #0d47a1;
-  color: white;
-  font-size: 16px;
+  background-color: #0066ff;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -72,14 +72,14 @@ strong {
 }
 
 .verify-button:hover {
-  background-color: #1565c0;
+  background-color: #000000;
 }
 
 .footer {
   margin-top: 30px;
   text-align: center;
   font-size: 14px;
-  color: #aaa;
+  color: #ffffff;
   border-top: 1px solid #eee;
   padding-top: 15px;
 }

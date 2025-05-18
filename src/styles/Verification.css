@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: #ffffff;
+  color: #000000;
   line-height: 1.6;
   padding: 10px 20px 20px 20px; /* less top padding */
 }
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5 {
 .verify-btn {
   padding: 12px 20px;
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 500;
   border-radius: 6px;
@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .verify-btnn {
-  background: linear-gradient(135deg, #31463f, #070930);
-  color: orangered;
+  background: linear-gradient(135deg, #7bc6ad, #060b71);
+  color: rgb(210, 45, 45);
 }
 
 .verify-btnn:hover,
@@ -163,7 +163,7 @@ textarea.input-field {
 }
 
 .success {
-  background-color: #28a745;
+  background-color: #a72828;
   color: white;
 }
 
@@ -244,4 +244,75 @@ textarea.input-field {
     text-align: left;
   }
 }
+.loan-message {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a); /* Dark blue tones */
+  padding: 2rem;
+  border-radius: 20px;
+  color: #ffffff;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 700px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.loan-message h1 {
+  color: #adff2f; /* Green-yellow for high contrast */
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.loan-message h5 {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.loan-message strong {
+  color: #22c55e; /* Light green for savings highlight */
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loan-message {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 16px;
+  }
+
+  .loan-message h1 {
+    font-size: 1.7rem;
+  }
+
+  .loan-message h5 {
+    font-size: 1rem;
+  }
+
+  .loan-message strong {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loan-message {
+    padding: 1rem;
+  }
+
+  .loan-message h1 {
+    font-size: 1.4rem;
+  }
+
+  .loan-message h5 {
+    font-size: 0.95rem;
+  }
+
+  .loan-message strong {
+    font-size: 1rem;
+  }
+}
+
 

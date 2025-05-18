@@ -1,20 +1,24 @@
 /* Home.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+  line-height: 1.6;
+}
+
 .section {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  /* background: linear-gradient(to right, #ffffff, #211919); */
-  color: #000000;
-  max-height: 90vh;
-  border-radius: 50px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 header {
-  display: block;
-  background: linear-gradient(to right, #ffffff, #000000);
-  padding: 5px;
+  background: linear-gradient(to right, #ffffff, #00ffbb);
+  padding: 40px 20px;
   text-align: center;
-  z-index: 2;
-  position:relative;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 .header-content {
@@ -24,52 +28,49 @@ header {
 }
 
 .logo {
-  width: 100px;
+  width: 160px;
   height: auto;
+  border-radius: 20px;
   margin-bottom: 10px;
 }
 
-
-.header-content {
-  margin-bottom: 100px;
-}
-
-.logo {
-  width: 200px;
-  height: auto;
-  margin-bottom: 1px;
-  border-radius: 50px;
-}
-
 h1 {
-  color: #000000;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin: 10px 0;
-  font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+}
+h2 {
+  color: #ffffff;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: #000000;
 }
 
 .cta-button {
-  background-color: #00a651;
+  background: linear-gradient(to right, #00ff7b, #002b8fa2);
   color: white;
-  padding: 8px 20px;
+  padding: 12px 24px;
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-  display: inline-block;
-  margin: 12px auto;
-  font-size: 14px; 
-  width: 200px;
-
-  transition: background-color 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgb(0, 166, 80);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus {
   background-color: #008f45;
+  transform: translateY(-2px);
+  outline: none;
 }
 
 .benefits {
@@ -77,16 +78,17 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
-  margin: 30px 0;
+  margin: 40px 0;
 }
 
 .benefit {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #cce6dc;
   padding: 20px;
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 240px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgb(0, 255, 38);
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
@@ -95,25 +97,29 @@ p {
 }
 
 .benefit h3 {
-  color: #ffffff;
-  margin-bottom: 5px;
-  margin-top: 3px;
-  font-size: 0.5cm;
+  color: #00a651;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.benefit p {
+  color: #000000;
+  font-size: 1rem;
 }
 
 .testimonials {
-  margin: 30px auto;
+  margin: 40px auto;
   max-width: 600px;
 }
 
 .testimonial {
   background-color: #ffffff;
-  border-left: 4px solid #00a651;
-  padding: 15px 20px;
+  border-left: 5px solid #00a63d;
+  padding: 20px;
   margin-bottom: 20px;
   font-style: italic;
-  box-shadow: 0 1px 3px rgba(83, 131, 203, 0.05);
   border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial strong {
@@ -121,24 +127,37 @@ p {
   margin-top: 10px;
   text-align: right;
   color: #333;
-  background-color: #4bbe99 ;
 }
 
 footer {
-  margin-top: px;
+  text-align: center;
+  margin-top: 40px;
   padding: 20px 0;
-  border-top: 1px solid #dfeee8;
-  color: #39889e;
-  font-size: 0.9em;
+  color: #666;
+  font-size: 0.9rem;
 }
+
+/* Animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit,
+.testimonial {
+  animation: fadeUp 0.5s ease-in-out;
+}
+
+/* Tablet: Up to 768px */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2em;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 1em;
+    font-size: 2rem;
   }
 
   .benefits {
@@ -150,22 +169,59 @@ footer {
     width: 90%;
   }
 
-  .testimonial {
-    font-size: 0.95em;
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 250px;
+    border-radius: 60px;
   }
 }
 
+/* Phone: Up to 480px */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.6em;
+  .section {
+    padding: 10px;
   }
 
-  p {
-    font-size: 1em;
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+    font-weight: 100;
+  }
+
+  p,
+  .benefit p,
+  .testimonial {
+    font-size: 0.95rem;
+  }
+
+  .benefits {
+    gap: 15px;
+  }
+
+  .benefit {
+    padding: 16px;
+    width: 95%;
   }
 
   .cta-button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
     width: 100%;
-    text-align: center;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+
+  .testimonial {
+    padding: 15px;
   }
 }

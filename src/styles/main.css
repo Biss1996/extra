@@ -85,8 +85,8 @@
       margin-bottom: 20px;
       border: 1px solid #000;
       border-radius: 8px;
-      background-color: #4f4f4f;
-      color: white;
+      background-color: #ffffff;
+      color: rgb(108, 108, 108);
       font-size: 16px;
       transition: border-color 0.3s, background-color 0.3s;
     }
@@ -95,7 +95,7 @@
     select:focus {
       border-color: #209bde;
       outline: none;
-      background-color: #898989;
+      background-color: #ffffff;
     }
 
     button {
