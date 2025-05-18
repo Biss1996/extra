@@ -192,6 +192,7 @@ footer {
   .logo {
     width: 300px;
     border-radius: 50px;
+    
   }
 }
 
@@ -201,9 +202,10 @@ footer {
     padding: 10px;
   }
 
-  .logo {
-    width: 100px;
-  }
+  /* .logo {
+    width: 1000px;
+    
+  } */
 
   h1 {
     font-size: 5.6rem;

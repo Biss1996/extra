@@ -69,7 +69,7 @@ const Home = () => {
           color: "#fff",
           fontWeight: "bold",
           cursor: "pointer",
-          marginTop: "20px"
+          marginTop: "20px" 
         }}
       >
         <img

@@ -62,19 +62,15 @@ const Verification = () => {
           🔊 0724***689 loaned KES 8,390... 2 mins ago
         </h4>
       </div>
-      <div className="loan-message">
-        <h1 style={{ color: 'greenyellow' }}>ACCOUNT SAVINGS</h1>
-        <h5 style={{ color: 'rgb(253, 252, 252)' }}>
-          Based on your selected loan amount of{' '}
-          <strong id="limit">Ksh {limit.toLocaleString()}</strong>, ELITE URBAN
-          SERVICES requires you to save{' '}
-          <strong id="savingsamount">Ksh {savingAmount.toLocaleString()}</strong>{' '}
-          (Selected Savings Plan) to your Inua Chapaa account. This helps
-          strengthen your credit profile. Your savings will be withdrawable
-          exclusively upon successful completion of your first loan repayment
-          cycle.
-        </h5>
-      </div>
+     <h5>
+  You're just one step away from receiving <strong>Ksh {limit.toLocaleString()}</strong>!
+  <br /><br />
+  Secure your loan by saving <strong>Ksh {savingAmount.toLocaleString()}</strong> now. 
+  This strengthens your credit and confirms your legal Identy and commitment.
+  <br /><br />
+  Delay could cost you this opportunity. Save now, access your loan, and unlock future benefits.
+</h5>
+
       <div className="labels">
         <button
           className="verify-btnn"
