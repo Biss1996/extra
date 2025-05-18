@@ -19,7 +19,7 @@ const Savings = () => {
     };
 
     const savingsPlans = [
-      { savings: 120, limit: getRandom(2500, 3500) },
+      { savings: 150, limit: getRandom(2500, 3500) },
       { savings: 170, limit: getRandom(4000, 5000) },
       { savings: 220, limit: getRandom(6000, 7000) },
       { savings: 300, limit: getRandom(7000, 10000) },

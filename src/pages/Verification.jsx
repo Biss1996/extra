@@ -113,7 +113,7 @@ const Verification = () => {
           <div className="labels">
             <strong>Till Number</strong>: {' '}
             <span style={{ marginLeft: '0%' }}>
-              <strong>5622370</strong>
+              <strong>562 2370</strong>
       
             </span>
           </div>

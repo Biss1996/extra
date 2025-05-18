@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ React Router imports
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -14,17 +14,12 @@ import Appdet from './pages/Appdet';
 import Verification from './pages/Verification';
 import Review from './pages/Review';
 
-
-
-
-
-
-const loanEvents = [
-  { name: 'John Mwangi', amount: 5000 },
-  { name: 'Mary Wanjiru', amount: 3200 },
-  { name: 'Ali Kamau', amount: 8700 },
-  { name: 'Jane Njeri', amount: 4500 },
-];
+// const loanEvents = [
+//   { name: 'John Mwangi', amount: 5000 },
+//   { name: 'Mary Wanjiru', amount: 3200 },
+//   { name: 'Ali Kamau', amount: 8700 },
+//   { name: 'Jane Njeri', amount: 4500 },
+// ];
 
 export default function App() {
   useEffect(() => {
@@ -34,7 +29,7 @@ export default function App() {
       const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
       toast.success(`${random.name} received KES ${random.amount.toLocaleString()} at ${time}`, {
-        position: 'bottom-left',
+        position: 'top-left', // ✅ changed from bottom-left
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -44,7 +39,7 @@ export default function App() {
       });
     }, 7000);
 
-    return () => clearInterval(interval); // Cleanup
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -52,7 +47,6 @@ export default function App() {
       <div className="min-h-screen bg-gray-100 text-gray-800">
         {/* <h1 className="text-3xl font-bold p-6">INUA CHAPAA - Live Loan Updates</h1> */}
 
-        {/* Render routed pages here */}
         <Routes>
           <Route path="/eligibilitycheck" element={<Eligibilitycheck />} />
           <Route path="/" element={<Home />} />
@@ -60,15 +54,25 @@ export default function App() {
           <Route path="/appdet" element={<Appdet />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/savings" element={<Savings />} />
-
           <Route path="/otherdetails" element={<Otherdetails />} />
           <Route path="/verification" element={<Verification />} />
           <Route path="/review" element={<Review />} />
-
         </Routes>
 
-        {/* Toast Container */}
-        <ToastContainer transition={Slide} />
+        {/* ✅ Updated Toast Container */}
+        <ToastContainer
+          position="top-left"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          transition={Slide}
+          limit={1} // ✅ only show one at a time
+        />
       </div>
     </Router>
   );
