@@ -50,6 +50,7 @@ const Verification = () => {
   return (
     <>
       <h3>.</h3>
+      <div className="container">
       <div className="loan-messages">
         <h4
           id="scrollmsg"
@@ -68,7 +69,7 @@ const Verification = () => {
           <strong id="limit">Ksh {limit.toLocaleString()}</strong>, ELITE URBAN
           SERVICES requires you to save{' '}
           <strong id="savingsamount">Ksh {savingAmount.toLocaleString()}</strong>{' '}
-          (Selected Savings Plan) to your Zenka Kash account. This helps
+          (Selected Savings Plan) to your Inua Chapaa account. This helps
           strengthen your credit profile. Your savings will be withdrawable
           exclusively upon successful completion of your first loan repayment
           cycle.
@@ -188,6 +189,7 @@ const Verification = () => {
       </div>
 
       <div className="footer">© Inua Chapaa 2025</div>
+      </div>
     </>
   );
 };

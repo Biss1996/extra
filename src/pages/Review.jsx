@@ -62,7 +62,7 @@ const Review = () => {
         </div>
       </div>
 
-      <div className="footer">© Zenka Kash 2025</div>
+      <div className="footer">© Inua Chapaa 2025</div>
     </div>
   );
 };

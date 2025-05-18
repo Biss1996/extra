@@ -9,8 +9,16 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
-    // You can collect form data here if needed
+
+    // Get values from form fields
+    const name = document.getElementById('names').value;
+    const phone = document.getElementById('mpesas').value;
+
+    // Store in localStorage
+    localStorage.setItem('name', name);
+    localStorage.setItem('phone', phone);
+
+    // Navigate to next page
     navigate("/otherdetails");
   };
 
@@ -35,27 +43,10 @@ const Signup = () => {
         <div className="preloader-text">Loading, please wait...</div>
       </div>
 
-      {/* <header>
-        <nav className="navbar">
-          <div className="logo">Zenka Kash</div>
-          <ul className="nav-links" id="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/login">Login</a></li>
-          </ul>
-          <div className="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </header> */}
-
       <div className="main-container">
         {/* Left Section */}
         <div className="left-content">
-          <h1>INUA  <br /> CHAPAA</h1>
+          <h1>INUA <br /> CHAPAA</h1>
           <p>
             Let us help you manage your finances effortlessly.
             Get a loan for business, personal needs, emergencies, or more.
@@ -93,12 +84,12 @@ const Signup = () => {
               <option value="Business">Divorced</option>
             </select>
             <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-      >
-        Next
-      </button>
-    </form>
+              type="submit"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Next
+            </button>
+          </form>
 
           <p className="note">
             No CRB Check. No Guarantors. Disbursed to MPESA. No Paperwork.

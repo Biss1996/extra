@@ -48,7 +48,7 @@ const Eligibilitycheck = () => {
     <div className="container">
       <h1 className="wait-heading">Please wait...</h1>
       <div className="gif-container">
-        <img src={gifSrc} alt="Authorization GIF" />
+        {/* <img src={gifSrc} alt="Authorization GIF" /> */}
       </div>
       <div className="timer">{statusText}</div>
       <h4 className="eligibility-label">{eligibilityMessage}</h4>

@@ -1,0 +1,154 @@
+/* Base container styling */
+.appdet-container {
+  max-width: 95%;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f7fa;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgb(255, 0, 0);
+}
+
+/* Loan message section */
+.loan-message {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.loan-message h1 {
+  color: #007e33;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.loan-message h2 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.loan-message h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.loan-message h4 {
+  font-size: 1.6rem;
+  color: #147138;
+  margin: 10px 0;
+}
+
+.loan-message h5 {
+  font-size: 1rem;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+/* Loan financial summary */
+.loan-table {
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.loan-table > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.labels {
+  font-size: 1rem;
+  color: #ff0000;
+  flex: 1 1 45%;
+  margin-bottom: 6px;
+}
+
+/* MPESA section */
+.loan-tabless {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.loan-tabless .labels {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.loan-tabless .labels span {
+  font-weight: bold;
+}
+
+/* Apply button */
+.verify-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #0099cc;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.verify-button:hover {
+  background-color: #0077aa;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .loan-message h1 {
+    font-size: 1.5rem;
+  }
+
+  .loan-message h4,
+  .loan-message h5 {
+    font-size: 1.2rem;
+  }
+
+  .labels {
+    font-size: 0.95rem;
+  }
+
+  .verify-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .loan-message h1 {
+    font-size: 1.2rem;
+  }
+
+  .loan-message h2,
+  .loan-message h5,
+  .loan-message h4 {
+    font-size: 1rem;
+  }
+
+  .labels {
+    font-size: 0.9rem;
+  }
+
+  .verify-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}

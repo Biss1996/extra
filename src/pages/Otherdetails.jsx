@@ -57,7 +57,7 @@ const OtherDetails = () => {
 
       <div className="main-container">
         <div className="left-content">
-          <h1>Zenka <br /> Kash</h1>
+          <h1>INUA <br />CHAPAA</h1>
           <p>
             Let us help you manage your finances effortlessly.
             Get a loan for business, personal needs, emergencies, or more.
@@ -130,7 +130,7 @@ const OtherDetails = () => {
       </div>
 
       <footer>
-        <p>© 2025 Zenka Kash. All rights reserved. <a href="/">Home</a></p>
+        <p>© 2025 Inua Chapaa. All rights reserved. <a href="/">Home</a></p>
       </footer>
     </>
   );

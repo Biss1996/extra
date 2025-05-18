@@ -1,97 +1,231 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background: linear-gradient(135deg, #209bde, #94b155);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 10px 20px 20px 20px; /* less top padding */
+}
+.container {
+  margin-top: 10px; /* close to top */
+  padding: 0 5%;
 }
 
-.loan-messages {
-  background-color: transparent;
-  padding: 10px;
-  border-radius: 12px;
-  margin: 2px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 130%;
-  height: 10%;
+
+
+/* Container padding */
+.loan-messages,
+.loan-message,
+.loan-tabless,
+.labels,
+.footer {
+  padding: 5px 5%;
+
 }
 
-.loan-message {
-  background: linear-gradient(135deg, #55b194, #070930);
-  padding: 2px;
-  border-radius: 12px;
-  margin: 2px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 10%;
-  margin-top: 4.5%;
+/* Section Headings */
+h1, h2, h3, h4, h5 {
+  margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 1em;
-  text-align: center;
-  margin: 30px 0;
+/* Scroll Message */
+#scrollmsg {
+  font-size: 16px;
   font-weight: bold;
-  color: greenyellow;
-
-}
-
-h3 {
-  font-size: 0.1em;
-  text-align: center;
-  margin: 30px 0;
-  margin-top: -10%;
-}
-
-h4 {
-  font-size: 0.8em;
-  text-align: center;
-  margin: 30px 20px;
-  margin-top: 0.5%;
-  border-radius: 5px;
-  width: 100%;
-  margin-left: 0%;
-  color: white;
+  padding: 10px;
+  border-radius: 6px;
   background: linear-gradient(135deg, rgb(255, 255, 255), white);
+  color: #070930;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Main Loan Message Section */
+.loan-message {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.loan-message strong {
   color: #070930;
 }
 
-h5 {
-  font-size: 0.8em;
-  margin: 30px 0;
-  margin-left: 5%;
-  margin-top: 0.5%;
-  color: rgb(253, 252, 252);
-}
-
+/* Labels and Text */
 .labels {
-  background: #ddeefa51;
-  color: #000000;
-  width: 100%;
-  padding: 11px;
-}
-
-.loan-tabless {
-  background: #ddeefa;
-  border-radius: 12px;
-  border-color: #000000;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgb(249, 3, 3);
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 0.5%;
-}
-
-.loan-tabless div {
+  margin: 12px 0;
+  font-size: 16px;
   display: flex;
-  border-bottom: 1px solid #525252;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.loan-tabless div:last-child {
-  border-bottom: none;
+.labels strong {
+  margin-right: 8px;
+}
+
+/* Buttons */
+.verify-btnn,
+.open-modal-btn,
+.verify-btn {
+  padding: 12px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+  display: inline-block;
+  text-align: center;
 }
 
 .verify-btnn {
-  background: linear-gradient(135deg, greenyellow, green);
+  background: linear-gradient(135deg, #31463f, #070930);
+  color: orangered;
+}
+
+.verify-btnn:hover,
+.verify-btn:hover,
+.open-modal-btn:hover {
+  background-color: #1a1a2e;
+}
+
+.open-modal-btn {
+  background-color: #070930;
+}
+
+.verify-btn {
+  background-color: #070930;
+  width: 100%;
+}
+
+/* Modal and Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.modal h2 {
+  margin-bottom: 10px;
   color: #070930;
-  margin-left: 10px;
+}
+
+.modal p {
+  margin-bottom: 15px;
+}
+
+textarea.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+/* Verification Message */
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.error {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #070930;
+  color: white;
+  font-size: 14px;
+  margin-top: 30px;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loan-message h1 {
+    font-size: 20px;
+  }
+
+  .verify-btnn,
+  .open-modal-btn,
+  .verify-btn {
+    width: 100%;
+  }
+
+  .labels {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .loan-message h1 {
+    font-size: 18px;
+  }
+
+  #scrollmsg {
+    font-size: 14px;
+  }
+
+  .modal {
+    padding: 15px;
+  }
+
+  textarea.input-field {
+    font-size: 14px;
+  }
+
+  .verify-btnn,
+  .open-modal-btn,
+  .verify-btn {
+    font-size: 15px;
+    background-color: #ccc;
+  }
 }

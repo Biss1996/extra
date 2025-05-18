@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import '../styles/Appdet.css';
+import '../styles/Appdet.css';
 
 
 
@@ -14,6 +14,8 @@ const Appdet = () => {
   const [savingAmount, setSavingAmount] = useState(0);
   const [interest, setInterest] = useState(0);
   const [receivable, setReceivable] = useState(0);
+  const [names, setNames] = useState(0);
+
 
   useEffect(() => {
     // Get limit from localStorage or default to 0
@@ -100,6 +102,7 @@ const Appdet = () => {
         </div>
         <div>
           <div className="labels" id="phonenumber"></div>
+          
         </div>
         <div>
           <div className="labels" id="youname"></div>
@@ -110,7 +113,7 @@ const Appdet = () => {
         </button>
       </div>
 
-      <div className="footer">© Zenka Kash 2025</div>
+      <div className="footer">© Inua Chapaa 2025</div>
     </div>
   );
 };
