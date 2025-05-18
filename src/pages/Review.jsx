@@ -20,7 +20,7 @@ const Review = () => {
     <div className="review-container">
       <div className="header">
         <div className="logo">
-          ZENKA KASH
+          INUA CHAPAA
           <div className="logo-circle">
             <span className="bolt">⚡</span>
           </div>

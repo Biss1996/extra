@@ -1,130 +1,175 @@
+/* Base container */
 .review-container {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #55b19a;
-  margin-top: 280px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
 .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.2em;
+  color: #2c3e50;
 }
 
 .logo-circle {
-  width: 30px;
-  height: 30px;
-  background-color: #cdf4d0;
+  width: 24px;
+  height: 24px;
+  background-color: #ffd700;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-left: 8px;
 }
 
 .bolt {
-  color: #00c853;
-  font-size: 1.2em;
+  font-size: 14px;
 }
 
 .dark-mode {
-  background: #cdf4d0;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
+/* Headings and messages */
 h1 {
-  font-size: 1.8em;
-  text-align: center;
-  margin: 30px 0;
-  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+  color: #2e86de;
+  margin-bottom: 1rem;
 }
 
 .loan-message {
-  background: #070930;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  color: white;
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
 }
 
 .verify-buttons {
-  background: #05a247;
-  color: white;
-  border-radius: 25px;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #eaf2ff;
+  color: #2c3e50;
   border: none;
+  border-radius: 6px;
+  cursor: default;
+  font-weight: 600;
   width: 100%;
-  font-size: 1em;
-  cursor: pointer;
-  margin: 10px 0;
-  padding: 12px 20px;
+  text-align: left;
 }
 
-.loan-table {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.loan-table div {
+/* Loan table */
+.loan-table > div {
   display: flex;
-  border-bottom: 1px solid #f0f0f0;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 
-.loan-table div:last-child {
-  border-bottom: none;
-}
-
-.label, .labels {
-  flex: 1;
-  padding: 15px;
-  color: #000;
-}
-
-.label {
-  background: #ddeefa;
-}
-
+.label,
 .labels {
-  background: #ddeefa51;
+  font-weight: 500;
+  color: #555;
+  flex: 1 1 45%;
+  margin-bottom: 0.25rem;
 }
 
+/* Status Styles */
 .status-pending {
-  background: #26d672;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
-  display: inline-block;
+  color: #f39c12;
+  font-weight: bold;
 }
 
 .status-not-verified {
-  background: #e6061d;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
-  display: inline-block;
+  color: #e74c3c;
+  font-weight: bold;
 }
 
+/* Footer */
 .footer {
   text-align: center;
-  color: wheat;
-  margin-top: 25px;
-  font-size: 0.9em;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-theme .review-container {
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+}
+
+.dark-theme .loan-message {
+  background-color: #333;
+  border-left-color: #3498db;
+}
+
+.dark-theme .verify-buttons {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.dark-theme .label,
+.dark-theme .labels {
+  color: #ddd;
+}
+
+.dark-theme .footer {
+  color: #bbb;
+}
+
+/* ------------------------ */
+/* 📱 Responsive Design 📱  */
+/* ------------------------ */
+@media (max-width: 600px) {
+  .review-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .loan-table > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label,
+  .labels {
+    flex: 1 1 100%;
+  }
+
+  .verify-buttons {
+    font-size: 0.95rem;
+  }
 }

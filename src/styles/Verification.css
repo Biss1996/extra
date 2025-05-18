@@ -229,3 +229,19 @@ textarea.input-field {
     background-color: #ccc;
   }
 }
+.loan-info {
+  color: rgb(253, 252, 252);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .loan-info {
+    font-size: 0.95rem;
+    padding: 8px;
+    text-align: left;
+  }
+}
+
