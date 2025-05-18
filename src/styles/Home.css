@@ -1,19 +1,19 @@
 /* Home.css */
 .section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background: linear-gradient(to right, #ffffff, #868686);
+  /* background: linear-gradient(to right, #ffffff, #211919); */
   color: #000000;
-  max-height: 1000vh;
+  max-height: 90vh;
   border-radius: 50px;
 }
 
 header {
   display: block;
-  background: linear-gradient(to right, #e1e1e1, #151515);
+  background: linear-gradient(to right, #ffffff, #000000);
   padding: 5px;
   text-align: center;
   z-index: 2;
-  position: relative;
+  position:relative;
   border-radius: 50px;
 }
 
@@ -35,7 +35,7 @@ header {
 }
 
 .logo {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-bottom: 1px;
   border-radius: 50px;

@@ -1,19 +1,19 @@
-/* body {
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   background: linear-gradient(135deg, #209bde, #94b155);
-} */
+}
 
 .loan-messages {
   background-color: transparent;
-  padding: 1px;
+  padding: 10px;
   border-radius: 12px;
   margin: 2px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 120%;
-  height: 4%;
+  margin-top: 130%;
+  height: 10%;
 }
 
 .loan-message {

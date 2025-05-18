@@ -82,6 +82,7 @@ const Home = () => {
 </button>
 
       </header>
+      <section>
       <section className="section" style={{ textAlign: "center" }}>
         <h2>Need Cash Fast?</h2>
         <p>
@@ -132,6 +133,7 @@ const Home = () => {
         <footer>
           &copy; 2025 INUA CHAPAA. All rights reserved.
         </footer>
+      </section>
       </section>
     </div>
   );
