@@ -8,13 +8,14 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.6;
   padding: 10px 20px 20px 20px; /* less top padding */
 }
 .container {
   margin-top: 10px; /* close to top */
-  padding: 0 5%;
+  /* padding: 0 5%; */
+  padding: 5px;
 }
 
 
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5 {
   padding: 10px;
   border-radius: 6px;
   background: linear-gradient(135deg, rgb(255, 255, 255), white);
-  color: #070930;
+  color: #2b2e5b;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -53,7 +54,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .loan-message strong {
-  color: #070930;
+  color: #000dff;
 }
 
 /* Labels and Text */
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .labels strong {
-  margin-right: 8px;
+  margin-right: 1px;
 }
 
 /* Buttons */
@@ -163,7 +164,7 @@ textarea.input-field {
 }
 
 .success {
-  background-color: #a72828;
+  background-color: #1a7d2c;
   color: white;
 }
 
@@ -314,5 +315,28 @@ textarea.input-field {
     font-size: 1rem;
   }
 }
+.loan-tabless {
+  background-color: #f9f9f97d;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.labels {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin: 10px 0;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
+.labels strong {
+  color: #1f5b02;
+}
+
 
 

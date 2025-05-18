@@ -2,7 +2,7 @@
   max-width: 700px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #ffffff;
+   background: linear-gradient(135deg, #ffffff, #206f83);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,7 +16,7 @@
 }
 
 .loan-message h2 {
-  color: #000000;
+  color: #ffffff;
   font-size: 16px;
   margin-bottom: 15px;
 }
@@ -29,7 +29,7 @@
 
 .loan-message h4#limit {
   font-size: 22px;
-  color: #017c2e;
+  color: #91ff00;
 }
 
 .loan-table,

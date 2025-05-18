@@ -24,7 +24,7 @@
       align-items: center;
       gap: 0;
       padding: 90px;
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0);
       border-radius: 20px;
       margin-top: 10px;
     }
@@ -55,10 +55,10 @@
 
     /* Form Styling */
     .form-wrapper {
-      background-color: rgba(255, 255, 255, 0.95);
+     background: linear-gradient(135deg, #ffffff, #206f83);
       padding: 40px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(255, 0, 0, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
       width: 100%;
       max-width: 450px;
     }

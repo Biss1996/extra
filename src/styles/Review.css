@@ -3,7 +3,7 @@
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, #206f83);
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,20 +15,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  color: #2c3e50;
+  color: #006682;
 }
 
 .logo-circle {
-  width: 24px;
-  height: 24px;
+  width: 100px;
+  height: 20px;
   background-color: #ffd700;
   border-radius: 50%;
   display: flex;
@@ -49,7 +51,7 @@
 /* Headings and messages */
 h1 {
   font-size: 1.25rem;
-  color: #2e86de;
+  color: #0b5db0;
   margin-bottom: 1rem;
 }
 
@@ -65,9 +67,9 @@ h1 {
   margin-top: 0.75rem;
   padding: 0.5rem 1rem;
   background-color: #eaf2ff;
-  color: #2c3e50;
+  color: #ffffff;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: default;
   font-weight: 600;
   width: 100%;
@@ -86,19 +88,19 @@ h1 {
 .label,
 .labels {
   font-weight: 500;
-  color: #555;
+  color: #000000;
   flex: 1 1 45%;
   margin-bottom: 0.25rem;
 }
 
 /* Status Styles */
 .status-pending {
-  color: #f39c12;
+  color: #77ff00;
   font-weight: bold;
 }
 
 .status-not-verified {
-  color: #e74c3c;
+  color: #77ff00;
   font-weight: bold;
 }
 
