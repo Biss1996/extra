@@ -80,7 +80,7 @@ const Home = () => {
   <header>
     <div className="header-content">
       <img src="/chapaa.jpg" alt="INUA CHAPAA Logo" className="logo" />
-      <h1>INUA CHAPAA</h1>
+      <h2>INUA CHAPAA</h2>
       <p>Quick, Safe, and Easy Mobile Loans</p>
 
       <button
@@ -140,11 +140,11 @@ const Home = () => {
     <h2>What Our Users Say</h2>
     <div className="testimonials">
       <div className="testimonial">
-        <p>“INUA CHAPAA helped me pay school fees on time. Lifesaver!”</p>
+        <p1>“INUA CHAPAA helped me pay school fees on time. Lifesaver!”</p1>
         <strong>- James M.</strong>
       </div>
       <div className="testimonial">
-        <p>“Very convenient. Got money within 10 minutes.”</p>
+        <p1>“Very convenient. Got money within 10 minutes.”</p1>
         <strong>- Wanjiku K.</strong>
       </div>
     </div>

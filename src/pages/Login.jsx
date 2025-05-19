@@ -42,7 +42,7 @@ const Login = () => {
       )}
 
       <main className="login-panel">
-        <h1 className="login-title">WELCOME BACK</h1>
+        <h1 className="login-title">Welcome Back</h1>
 
         <form onSubmit={handleLogin}>
           <div className="form-group">

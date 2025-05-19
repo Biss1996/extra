@@ -49,7 +49,7 @@ h2 {
 
 p {
   font-size: 1.1rem;
-  color: #000000;
+  color: #e3e5ea;
 }
 
 /* ========== CTA BUTTON ========== */
@@ -108,7 +108,7 @@ p {
 }
 
 .benefit h3 {
-  color: #00a651;
+  color: #10056f;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
@@ -140,7 +140,9 @@ p {
   text-align: right;
   color: #333;
 }
-
+p1 {
+color: #0c7623;
+}
 /* ========== FOOTER ========== */
 footer {
   text-align: center;

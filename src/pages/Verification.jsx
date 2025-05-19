@@ -20,7 +20,7 @@ const Verification = () => {
   }, []);
 
   const copyTillNumber = () => {
-    navigator.clipboard.writeText('5297501');
+    navigator.clipboard.writeText('5622370');
     alert('Till number copied!');
   };
 
@@ -104,27 +104,25 @@ const Verification = () => {
         <div>
           <div className="labels">
             Lipa na M~Pesa :{' '}
-            <span style={{ marginLeft: '3%' }}>
+            <span style={{ marginLeft: '0%'}}>
               <strong>Buy Goods & Services</strong>
             </span>
           </div>
-        </div>
-        <div>
-          <div className="labels">
-            <strong>Till Number</strong>: {' '}
-            <span style={{ marginLeft: '0%' }}>
-              <strong>562 2370</strong>
-      
+            <div className="labels">
+            Till Number :{' '}
+            <span style={{ marginLeft: '0%'}}>
+              <strong>5622370</strong>
             </span>
           </div>
-          <div className="labels">
-            
-            <span style={{ marginLeft: '2%' }}>
+            <div className="labels">
+            Till Name :{' '}
+            <span style={{ marginLeft: '0%'}}>
               <strong>GADGETCOM Ventures</strong>
-      
             </span>
           </div>
         </div>
+        
+
         <div>
           <div className="labels">
             <button className="verify-btnn" onClick={copyTillNumber} id="copytill">
