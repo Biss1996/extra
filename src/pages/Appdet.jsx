@@ -14,11 +14,19 @@ const Appdet = () => {
   const [savingAmount, setSavingAmount] = useState(0);
   const [interest, setInterest] = useState(0);
   const [receivable, setReceivable] = useState(0);
-  const [names, setNames] = useState(0);
+  const [name, setName] = useState('John Doe');
+  const [phone, setPhone] = useState();
+
+
 
 
   useEffect(() => {
     // Get limit from localStorage or default to 0
+    const stored = localStorage.getItem('name');
+    if (stored) setName(stored);
+
+    const storedPhone = localStorage.getItem('phone');
+if (storedPhone) setPhone(storedPhone);
     let lims = parseFloat(localStorage.getItem('limit')) || 0;
     setLimit(lims);
 
@@ -56,6 +64,7 @@ const Appdet = () => {
 
   const goToVerification = () => {
     navigate('/Verification');
+    
   };
 
   return (
@@ -105,7 +114,12 @@ const Appdet = () => {
           
         </div>
         <div>
-          <div className="labels" id="youname"></div>
+          <div className="labels">NAME: <strong>{name}</strong></div>
+        </div>
+        
+        <div>
+          <div className="labels">M-PESA NO :<strong>{phone}</strong></div>
+
         </div>
 
         <button className="verify-button" onClick={goToVerification}>

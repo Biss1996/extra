@@ -7,6 +7,7 @@ import '../styles/shared.css';
 const OtherDetails = () => {
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const form = document.getElementById("loanForms");
     const pwaInstallPopup = document.getElementById("pwa-install-popup");
@@ -50,7 +51,7 @@ const OtherDetails = () => {
       <div id="pwa-install-popup" className="pwa-install-popup">
         <div className="pwa-popup-content">
           <div className="gif-container">
-            <img src="assets/process.gif" alt="Authorization GIF" />
+            <img src="assets/load.gif" />
           </div>
         </div>
       </div>

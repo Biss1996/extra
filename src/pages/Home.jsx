@@ -84,7 +84,7 @@ const Home = () => {
       <p>Quick, Safe, and Easy Mobile Loans</p>
 
       <button
-        onClick={() => navigate("/login")}
+        onClick={() => navigate("/signup")}
         className="cta-button"
         style={{
           display: "flex",
@@ -158,7 +158,7 @@ const Home = () => {
         window.gtag?.("event", "conversion", {
           send_to: "AW-CONVERSION_ID/CONVERSION_LABEL"
         });
-        navigate("/login");
+        navigate("/signup");
       }}
     >
       Apply Now!
