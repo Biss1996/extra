@@ -31,10 +31,10 @@ header {
 }
 
 .logo {
-  width: 800px;
+  width: 900px;
   height: auto;
-  border-radius: 20px;
-  margin-bottom: 10px;
+  border-radius: 60px;
+  margin-bottom: 0px;
 }
 
 h1 {
@@ -134,6 +134,9 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+.testimonial p {
+  color: #000000;
+}
 .testimonial strong {
   display: block;
   margin-top: 10px;
