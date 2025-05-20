@@ -33,7 +33,12 @@ body {
 /* Section Headings */
 h1, h2, h3, h4, h5 {
   margin-bottom: 20px;
-  color: #070930;
+  color: #000000;
+}
+
+.container h5 strong {
+  margin-bottom: 20px;
+  color: #007e35; 
 }
 
 /* Scroll Message */
