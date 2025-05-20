@@ -24,7 +24,7 @@ body {
 
 /* Loan Message Section */
 .loan-message {
-  background-color: #0e1e5b;
+  background-color: #ffffff;
   color: #ffffff;
   border-radius: 12px;
   padding: 20px;
@@ -55,6 +55,18 @@ body {
   font-size: 22px;
   color: #91ff00;
   margin: 5px 0;
+  font-weight: bold;
+}
+.loan-message h4#limit1 {
+  font-size: 18px;
+  color: #91ff00;
+  margin: 5px 0;
+  font-weight: bold;
+}
+.loan-message h5 {
+  color: #ccccff;
+  margin: 10px 0 6px;
+  font-weight: bold;
 }
 
 /* Loan Details Row */
@@ -147,6 +159,7 @@ strong {
     font-size: 18px;
    
   }
+  
   .loan-table {
     flex-direction: column;
     gap: 10px;

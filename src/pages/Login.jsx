@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
-import '../styles/Login.css'; // Extract the <style> section into Login.css and import it
+import { useNavigate } from 'react-router-dom'; // ✅ Needed for programmatic navigation
+import '../styles/Login.css';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    setTimeout(() => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/review");
+    } catch (err) {
+      setError("Invalid credentials or unregistered account.");
       setLoading(false);
-      window.location.href = '/dashboard'; // Use a route you have defined
-    }, 2000);
+    }
   };
 
   const handleForgot = (e) => {
@@ -20,7 +30,7 @@ const Login = () => {
 
     setTimeout(() => {
       setLoading(false);
-      // window.location.href = '/forgot-password';
+      navigate('/forgot-password'); // ✅ Use this when route is ready
     }, 2000);
   };
 
@@ -29,9 +39,10 @@ const Login = () => {
 
     setTimeout(() => {
       setLoading(false);
-      window.location.href = '/signup';
+      navigate('/signup');
     }, 2000);
   };
+  
 
   return (
     <>
@@ -42,18 +53,26 @@ const Login = () => {
       )}
 
       <main className="login-panel">
-        <h1 className="login-title">Welcome Back</h1>
+        <h1 className="login-title1">INUA CHAPAA</h1>
+        <h1 className="login-title">Access Your Loans Safely & Securely</h1>
 
         <form onSubmit={handleLogin}>
-          <div className="form-group">
-            <label htmlFor="phone">Phone Number</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+          {error && <p className="error-message">{error}</p>}
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" required />
-          </div>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
           <div className="forgot-password">
             <a href="#" onClick={handleForgot}>Forgot Password?</a>

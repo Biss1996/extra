@@ -77,7 +77,7 @@ if (storedPhone) setPhone(storedPhone);
         <h5>
           Term <span style={{ marginLeft: '50%' }}> Receive Amount</span>
         </h5>
-        <h4>
+        <h4 id="limit1">
           14 days <span style={{ marginLeft: '45%' }}>Ksh {receivable.toFixed(2)}</span>
         </h4>
       </div>

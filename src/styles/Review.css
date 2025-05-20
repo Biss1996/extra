@@ -16,8 +16,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  border-radius: 16px;
-
 }
 
 .logo {
@@ -95,13 +93,60 @@ h1 {
 
 /* Status Styles */
 .status-pending {
-  color: #77ff00;
+  display: flex;
+  align-items: center;
+  color: #00d115;
   font-weight: bold;
+  font-size: 16px;
+  padding-right: 15px;  /* Adding space between text and dots */
 }
 
-.status-not-verified {
-  color: #ad1a1a;
-  font-weight: bold;
+.status-pending span {
+  margin-left: 8px;
+}
+
+/* Dot Flashing Animation */
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f9a825;
+  animation: dotFlashing 1s infinite linear alternate;
+  display: inline-block;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f9a825;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0.6s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #f9a825;
+  }
+  50%, 100% {
+    background-color: #15ff00;
+  }
 }
 
 /* Footer */
@@ -142,9 +187,7 @@ h1 {
   color: #bbb;
 }
 
-/* ------------------------ */
-/* 📱 Responsive Design 📱  */
-/* ------------------------ */
+/* Responsive Design */
 @media (max-width: 600px) {
   .review-container {
     padding: 1rem;
@@ -175,3 +218,6 @@ h1 {
     font-size: 0.95rem;
   }
 }
+  .status-not-verified {
+    color: #d0b100;
+  }
