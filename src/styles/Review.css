@@ -3,11 +3,32 @@
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background: linear-gradient(135deg, #ffffff, #206f83);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #e3f6f5);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background accents */
+.review-container::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at center, #00c6a2 20%, transparent 70%);
+  top: -60px;
+  right: -60px;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.review-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Header */
@@ -19,22 +40,22 @@
 }
 
 .logo {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  color: #006682;
+  color: #008080;
 }
 
 .logo-circle {
-  width: 100px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   background-color: #ffd700;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .bolt {
@@ -42,29 +63,33 @@
 }
 
 .dark-mode {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
 /* Headings and messages */
 h1 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #0b5db0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
 }
 
 .loan-message {
-  background-color: #f0f8ff;
+  background-color: #ecf5ff;
   padding: 1rem;
-  border-left: 4px solid #3498db;
+  border-left: 5px solid #0077cc;
   margin-bottom: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #004a73;
 }
 
 .verify-buttons {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #eaf2ff;
+  background: #006682;
   color: #ffffff;
   border: none;
   border-radius: 10px;
@@ -72,37 +97,45 @@ h1 {
   font-weight: 600;
   width: 100%;
   text-align: left;
+  font-size: 0.95rem;
 }
 
 /* Loan table */
 .loan-table > div {
   display: flex;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 0.8rem 0;
   border-bottom: 1px solid #eee;
   flex-wrap: wrap;
 }
 
-.label,
-.labels {
+.label {
   font-weight: 500;
-  color: #000000;
+  color: #222;
   flex: 1 1 45%;
   margin-bottom: 0.25rem;
+  font-size: 0.95rem;
 }
 
 /* Status Styles */
 .status-pending {
   display: flex;
   align-items: center;
-  color: #00d115;
   font-weight: bold;
-  font-size: 16px;
-  padding-right: 15px;  /* Adding space between text and dots */
+  color: #00b35a;
+  font-size: 15px;
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
-.status-pending span {
-  margin-left: 8px;
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.status-not-verified {
+  color: #d3a600;
+  font-weight: bold;
 }
 
 /* Dot Flashing Animation */
@@ -114,12 +147,12 @@ h1 {
   background-color: #f9a825;
   animation: dotFlashing 1s infinite linear alternate;
   display: inline-block;
+  margin-left: 10px;
 }
 
 .dot-flashing::before,
 .dot-flashing::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 0;
   width: 10px;
@@ -141,12 +174,8 @@ h1 {
 }
 
 @keyframes dotFlashing {
-  0% {
-    background-color: #f9a825;
-  }
-  50%, 100% {
-    background-color: #15ff00;
-  }
+  0% { background-color: #f9a825; }
+  50%, 100% { background-color: #15ff00; }
 }
 
 /* Footer */
@@ -154,7 +183,7 @@ h1 {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #888;
+  color: #777;
 }
 
 /* Dark Theme */
@@ -174,17 +203,16 @@ h1 {
 }
 
 .dark-theme .verify-buttons {
-  background-color: #3a3a3a;
+  background-color: #444;
   color: #fff;
 }
 
-.dark-theme .label,
-.dark-theme .labels {
-  color: #ddd;
+.dark-theme .label {
+  color: #ccc;
 }
 
 .dark-theme .footer {
-  color: #bbb;
+  color: #aaa;
 }
 
 /* Responsive Design */
@@ -201,7 +229,7 @@ h1 {
   }
 
   h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .loan-table > div {
@@ -209,8 +237,7 @@ h1 {
     align-items: flex-start;
   }
 
-  .label,
-  .labels {
+  .label {
     flex: 1 1 100%;
   }
 
@@ -218,6 +245,3 @@ h1 {
     font-size: 0.95rem;
   }
 }
-  .status-not-verified {
-    color: #d0b100;
-  }

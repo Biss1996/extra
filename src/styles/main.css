@@ -1,19 +1,20 @@
 /* Global Styles & Background */
+@media (max-width: 768px) {
     body {
-      font-family: "Arial", sans-serif;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("loanback.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      min-height: 100vh;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  font-family: "Arial", sans-serif;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+    url("backimage.jpeg") center/cover no-repeat fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000; /* Ensures text is readable */
+}
+}
+
 
     /* Main Container Layout */
     .main-container {

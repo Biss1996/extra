@@ -1,189 +1,57 @@
-/* Global Reset */
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0e4e61;
+  background: #f4f8fb;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
 }
 
-/* Main Container */
-.appdet-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background: linear-gradient(135deg, #ffffff, #206f83);
+.card {
+  background: white;
   border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #019a22;
 }
 
-/* Loan Message Section */
-.loan-message {
-  background-color: #ffffff;
-  color: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
+.success-text {
+  color: #91ff00;
   text-align: center;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.loan-message h1 {
-  font-size: 24px;
-  color: #a8ff00;
-  margin-bottom: 10px;
-}
-
-.loan-message h2 {
-  font-size: 14px;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.loan-message h3 {
-  color: #ccccff;
-  margin: 10px 0 6px;
-  font-weight: bold;
-}
-
-.loan-message h4#limit {
   font-size: 22px;
-  color: #91ff00;
-  margin: 5px 0;
-  font-weight: bold;
-}
-.loan-message h4#limit1 {
-  font-size: 16px;
-  color: #91ff00;
-  margin: 5px 0;
-  font-weight: bold;
-}
-.loan-message h5 {
-  color: #ccccff;
-  margin: 10px 0 6px;
-  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-/* Loan Details Row */
-.loan-table {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  color: #ffffff;
-}
-
-.loan-table div {
+.loan-amount {
+  font-size: 30px;
+  font-weight: 700;
+  color: #209bde;
   text-align: center;
-  flex: 1;
+  margin: 20px 0;
 }
 
-/* Data Section Below */
-.loan-tabless {
-  margin-top: 25px;
-  border-top: 1px solid #000000;
-  padding-top: 20px;
+.loan-details, .mpesa-info {
+  margin-top: 20px;
 }
 
-.loan-tabless div {
+.detail-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12px;
-  padding: 0 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
-.labels {
-  font-size: 15px;
-  color: #000000;
-}
-
-strong {
-  font-weight: bold;
-  color: #000000;
-}
-
-.verify-button {
-  display: block;
+.cta-btn {
   width: 100%;
   padding: 12px;
-  background-color: #0066ff;
-  color: #ffffff;
+  background: linear-gradient(135deg, #209bde, #0055aa);
+  color: white;
   font-size: 18px;
-  font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 25px;
+  transition: 0.3s;
 }
 
-.verify-button:hover {
-  background-color: #000000;
-}
-
-.footer {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 14px;
-  color: #ffffff;
-  border-top: 1px solid #eee;
-  padding-top: 15px;
-}
-/* 📱 Mobile Responsiveness */
-@media (max-width: 600px) {
-  .appdet-container {
-    padding: 15px;
-  }
-
-  .loan-message {
-    padding: 15px;
-  }
-
-  .loan-message h1 {
-    font-size: 18px;
-  }
-
-  .loan-message h2 {
-    font-size: 12px;
-  }
-
-  .loan-message h3 {
-    font-size: 14px;
-  }
-
-  .loan-message h4#limit {
-    font-size: 18px;
-   
-  }
-  
-  .loan-table {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-
-  .loan-table div {
-    width: 100%;
-    text-align: left;
-    padding: 5px 0;
-  }
-
-  .loan-tabless div {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .verify-button {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .labels {
-    font-size: 14px;
-  }
+.cta-btn:hover {
+  background: #003f80;
 }
