@@ -3,7 +3,7 @@ body {
   font-family: "Arial", sans-serif;
   background:
     linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-    url("/bestloan.png") no-repeat center center fixed;
+    url("/bmage.jpg") no-repeat center center fixed;
   background-size: cover; /* Ensures the image fully covers the screen */
   margin: 0;
   padding: 0;
