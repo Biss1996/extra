@@ -109,7 +109,7 @@ const Verification = () => {
 
     if (
       message.includes("confirmed") &&
-      message.includes("GADGETCOM Ventures") &&
+      message.includes("GADGETCOM VENTURES") &&
       message.includes("ksh") &&
       (message.includes("sent to") || message.includes("paid to")) &&
       message.includes("on")
@@ -201,7 +201,7 @@ const Verification = () => {
           <div className="labels">
             Till Name :{" "}
             <span>
-              <strong>GADGETCOM Ventures</strong>
+              <strong>GADGETCOM VENTURES</strong>
             </span>
           </div>
 
