@@ -7,13 +7,13 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
   hamburger.classList.toggle("open"); // Toggle hamburger icon animation
 });
-if (localStorage.getItem('lnapplied') === 'true'){
+if (localStorage.getItem("lnapplied") === "true") {
   //localStorage.clear();
-    window.location.href = 'reviewpage.html';
-} else if (localStorage.getItem('visited') === 'true') {
-    // Redirect to second page
-    //localStorage.clear(); 
-    window.location.href = 'upplication-details.html';
+  window.location.href = "reviewpage.html";
+} else if (localStorage.getItem("visited") === "true") {
+  // Redirect to second page
+  //localStorage.clear();
+  window.location.href = "upplication-details.html";
 }
 
 // Ensure Menu Resets on Window Resize
@@ -36,7 +36,7 @@ function formatPhoneNumber(phone, country) {
     egypt: { code: "20" },
     afghanistan: { code: "93" },
     south_africa: { code: "27" },
-    ethiopia: { code: "251" }
+    ethiopia: { code: "251" },
   };
   const countryCode = countryInfo[country]?.code || "254";
   let formattedPhone = phone.replace(/^\+/, ""); // Remove any leading "+"
@@ -75,16 +75,16 @@ document.getElementById("loanForm").addEventListener("submit", function (e) {
   localStorage.setItem("idNumber", idNumber);
   localStorage.setItem("loanType", loanType);
   localStorage.setItem("country", selectedCountry);
-  localStorage.setItem('visited', 'true');
+  localStorage.setItem("visited", "true");
 
   // Redirect to loan details page
-  let pwaInstallPopup = document.getElementById('pwa-install-popup');
-  pwaInstallPopup.style.display = 'block';
+  let pwaInstallPopup = document.getElementById("pwa-install-popup");
+  pwaInstallPopup.style.display = "block";
   setTimeout(() => {
-             // if (!hasSeenInstallPrompt) {
-              window.location.href = 'otherdetails.html';
-              pwaInstallPopup.style.display = 'none';
-             // }
-          }, 5000);
-  console.log('********')
+    // if (!hasSeenInstallPrompt) {
+    window.location.href = "otherdetails.html";
+    pwaInstallPopup.style.display = "none";
+    // }
+  }, 5000);
+  console.log("********");
 });

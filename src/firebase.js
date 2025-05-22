@@ -8,9 +8,9 @@ const firebaseConfig = {
   apiKey: "AIzaSyBl0TQeBQ_uYem8OVAN-XTW1_DpuoqqnfA",
   authDomain: "inuachapaa-550600.firebaseapp.com",
   projectId: "inuachapaa-550600",
- storageBucket: "inuachapaa-550600.appspot.com",
+  storageBucket: "inuachapaa-550600.appspot.com",
   messagingSenderId: "845277323383",
-  appId: "1:845277323383:web:7d330106c6b29c189b2672"
+  appId: "1:845277323383:web:7d330106c6b29c189b2672",
 };
 
 // Initialize Firebase
@@ -25,4 +25,3 @@ let analytics;
 if (typeof window !== "undefined") {
   analytics = getAnalytics(app);
 }
-

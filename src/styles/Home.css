@@ -1,7 +1,7 @@
 /* ========== BASE STYLES ========== */
 body {
   margin: 0;
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* background-color: #ffffff; */
   color: #111;
   line-height: 1.6;
@@ -56,7 +56,6 @@ header {
   opacity: 0.9;
 }
 
-
 h1 {
   font-size: 2.5rem;
   margin: 10px 0;
@@ -88,7 +87,9 @@ p {
   gap: 10px;
   margin-top: 20px;
   box-shadow: 0 4px 10px rgba(0, 166, 80, 0.4);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .cta-button:hover,
@@ -119,7 +120,9 @@ p {
   width: 260px;
   border-radius: 16px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -153,7 +156,9 @@ p {
   font-style: italic;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .testimonial:hover {
@@ -273,7 +278,11 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  background: linear-gradient(to right, #2e8b57, #3cb371); /* Stylish green gradient */
+  background: linear-gradient(
+    to right,
+    #2e8b57,
+    #3cb371
+  ); /* Stylish green gradient */
   color: white;
   text-align: center;
   border-radius: 16px;
@@ -303,4 +312,3 @@ footer {
   margin: 0;
   opacity: 0.9;
 }
-

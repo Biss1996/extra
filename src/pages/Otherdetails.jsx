@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Otherdetails.css";
-import '../styles/main.css';
-import '../styles/shared.css';
+import "../styles/main.css";
+import "../styles/shared.css";
 import { Helmet } from "react-helmet-async";
 
 <Helmet>
   {/* Primary SEO */}
   <title>INUA CHAPAA - Instant Mpesa Loans in Kenya</title>
-  <meta name="description" content="Need fast cash? INUA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free." />
-  <meta name="keywords" content="Mpesa loan, instant loan Kenya, mobile loan app, INUA CHAPAA, emergency loan Kenya, online loans" />
+  <meta
+    name="description"
+    content="Need fast cash? INUA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
+  />
+  <meta
+    name="keywords"
+    content="Mpesa loan, instant loan Kenya, mobile loan app, INUA CHAPAA, emergency loan Kenya, online loans"
+  />
   <meta name="author" content="INUA CHAPAA" />
   <link rel="canonical" href="https://inua-chapaa.com/" />
 
@@ -17,24 +23,45 @@ import { Helmet } from "react-helmet-async";
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://inua-chapaa.com/" />
   <meta property="og:title" content="INUA CHAPAA - Get Instant Mpesa Loans" />
-  <meta property="og:description" content="Instant cash to Mpesa. Apply in minutes with INUA CHAPAA mobile loans." />
-  <meta property="og:image" content="https://inua-chapaa.com/assets/social-banner.jpg" />
+  <meta
+    property="og:description"
+    content="Instant cash to Mpesa. Apply in minutes with INUA CHAPAA mobile loans."
+  />
+  <meta
+    property="og:image"
+    content="https://inua-chapaa.com/assets/social-banner.jpg"
+  />
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://inua-chapaa.com/" />
-  <meta name="twitter:title" content="INUA CHAPAA - Fast Mpesa Loans in Kenya" />
-  <meta name="twitter:description" content="Quick and easy mobile loans. Apply now and receive your funds via Mpesa." />
-  <meta name="twitter:image" content="https://inua-chapaa.com/assets/social-banner.jpg" />
+  <meta
+    name="twitter:title"
+    content="INUA CHAPAA - Fast Mpesa Loans in Kenya"
+  />
+  <meta
+    name="twitter:description"
+    content="Quick and easy mobile loans. Apply now and receive your funds via Mpesa."
+  />
+  <meta
+    name="twitter:image"
+    content="https://inua-chapaa.com/assets/social-banner.jpg"
+  />
 
   {/* TikTok Preview (optional if you're embedding a video) */}
-  <meta property="og:video" content="https://www.tiktok.com/@inua_chapaa/video/1234567890123456" />
+  <meta
+    property="og:video"
+    content="https://www.tiktok.com/@inua_chapaa/video/1234567890123456"
+  />
   <meta property="og:video:type" content="text/html" />
   <meta property="og:video:width" content="325" />
   <meta property="og:video:height" content="576" />
 
   {/* Google Ads Global Site Tag */}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"
+  ></script>
   <script>
     {`
       window.dataLayer = window.dataLayer || [];
@@ -47,8 +74,7 @@ import { Helmet } from "react-helmet-async";
   {/* Favicon + Manifest */}
   <link rel="icon" href="/favicon.ico" />
   <link rel="manifest" href="/manifest.json" />
-</Helmet>
-
+</Helmet>;
 
 const LoadingPopup = ({ isVisible }) => {
   if (!isVisible) return null;
@@ -126,10 +152,13 @@ const OtherDetails = () => {
 
       <div className="main-container">
         <div className="left-content">
-          <h1>INUA <br />CHAPAA</h1>
+          <h1>
+            INUA <br />
+            CHAPAA
+          </h1>
           <p>
-            Let us help you manage your finances effortlessly.
-            Get a loan for business, personal needs, emergencies, or more.
+            Let us help you manage your finances effortlessly. Get a loan for
+            business, personal needs, emergencies, or more.
           </p>
         </div>
 
@@ -147,13 +176,19 @@ const OtherDetails = () => {
               <option value="" disabled>
                 Level of Education
               </option>
-              <option value="Secondary and High School">Secondary and High School</option>
-              <option value="Diploma and Certificate">Diploma and Certificate</option>
+              <option value="Secondary and High School">
+                Secondary and High School
+              </option>
+              <option value="Diploma and Certificate">
+                Diploma and Certificate
+              </option>
               <option value="Bachelor Degree">Bachelor Degree</option>
               <option value="Master Degree">Master Degree</option>
               <option value="PHD Degree">PHD Degree</option>
             </select>
-            {formErrors.education && <div className="error">{formErrors.education}</div>}
+            {formErrors.education && (
+              <div className="error">{formErrors.education}</div>
+            )}
 
             <select
               id="employment"
@@ -170,7 +205,9 @@ const OtherDetails = () => {
               <option value="Self-employed">Self-employed</option>
               <option value="Others">Others</option>
             </select>
-            {formErrors.employment && <div className="error">{formErrors.employment}</div>}
+            {formErrors.employment && (
+              <div className="error">{formErrors.employment}</div>
+            )}
 
             <select
               id="Income"
@@ -187,7 +224,9 @@ const OtherDetails = () => {
               <option value="35,000 - 45,000">35,000 - 45,000</option>
               <option value="50,000 +">50,000 +</option>
             </select>
-            {formErrors.income && <div className="error">{formErrors.income}</div>}
+            {formErrors.income && (
+              <div className="error">{formErrors.income}</div>
+            )}
 
             <select required>
               <option value="" disabled>
@@ -209,7 +248,9 @@ const OtherDetails = () => {
               onChange={(e) => setRefName(e.target.value)}
               required
             />
-            {formErrors.refName && <div className="error">{formErrors.refName}</div>}
+            {formErrors.refName && (
+              <div className="error">{formErrors.refName}</div>
+            )}
 
             <input
               id="Refphone"
@@ -218,7 +259,9 @@ const OtherDetails = () => {
               onChange={(e) => setRefPhone(e.target.value)}
               required
             />
-            {formErrors.refPhone && <div className="error">{formErrors.refPhone}</div>}
+            {formErrors.refPhone && (
+              <div className="error">{formErrors.refPhone}</div>
+            )}
 
             <select id="Relationship" required>
               <option value="" disabled>
@@ -241,7 +284,8 @@ const OtherDetails = () => {
           </p>
           <p className="disclaimer">
             By submitting you confirm that you accept the{" "}
-            <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+            <a href="#">Terms and Conditions</a> and{" "}
+            <a href="#">Privacy Policy</a>.
           </p>
         </div>
       </div>

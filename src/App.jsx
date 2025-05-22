@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Toastify from 'toastify-js';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import './App.css';
+import "./App.css";
 
-import Home from './pages/Home.jsx';
-import Login from './pages/Login.jsx';
-import Signup from './pages/Signup'; 
-import Otherdetails from './pages/Otherdetails';
-import Eligibilitycheck from './pages/Eligibilitycheck';
-import Savings from './pages/Savings';
-import Appdet from './pages/Appdet';
-import Verification from './pages/Verification';
-import Review from './pages/Review';
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup";
+import Otherdetails from "./pages/Otherdetails";
+import Eligibilitycheck from "./pages/Eligibilitycheck";
+import Savings from "./pages/Savings";
+import Appdet from "./pages/Appdet";
+import Verification from "./pages/Verification";
+import Review from "./pages/Review";
 
 const users = [
   { name: "Ali Kamau", phone: "0712345123", amount: 8700 },
@@ -21,10 +21,13 @@ const users = [
   // ... you can keep all the rest
 ];
 
-const generateTransactionID = () => "TEF" + Math.floor(1000 + Math.random() * 9000);
+const generateTransactionID = () =>
+  "TEF" + Math.floor(1000 + Math.random() * 9000);
 const maskTransactionID = (txid) => txid.slice(0, 3) + "****";
-const maskPhoneNumber = (phone) => phone.slice(0, 2) + "** ***" + phone.slice(7);
-const formatDate = (date) => `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getFullYear()}`;
+const maskPhoneNumber = (phone) =>
+  phone.slice(0, 2) + "** ***" + phone.slice(7);
+const formatDate = (date) =>
+  `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getFullYear()}`;
 const formatTime = (date) => {
   let hours = date.getHours();
   const minutes = date.getMinutes().toString().padStart(2, "0");

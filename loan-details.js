@@ -19,8 +19,8 @@ function generateVerificationFee() {
 window.onload = function () {
   const youname = localStorage.getItem("name");
   const youphone = localStorage.getItem("phone");
-  let pwaInstallPopup = document.getElementById('pwa-install-popup');
-  pwaInstallPopup.style.display = 'none';
+  let pwaInstallPopup = document.getElementById("pwa-install-popup");
+  pwaInstallPopup.style.display = "none";
   //const idNumber = localStorage.getItem("idNumber") || "12345678";
   //const loanType = localStorage.getItem("loanType") || "Education Loan";
 
@@ -28,13 +28,18 @@ window.onload = function () {
   //const loanAmount = generateLoanAmount();
   //const verificationFee = generateVerificationFee();
 
-  document.getElementById("youname").innerHTML = "Account Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>" + youname + "</strong>";
-  document.getElementById("phonenumber").innerHTML = "Mpesa Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>" + youphone + "</strong>";
+  document.getElementById("youname").innerHTML =
+    "Account Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>" +
+    youname +
+    "</strong>";
+  document.getElementById("phonenumber").innerHTML =
+    "Mpesa Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>" +
+    youphone +
+    "</strong>";
   //document.getElementById("id-number").textContent = idNumber;
   //document.getElementById("loan-type").textContent = loanType;
   //document.getElementById("tracking-id").textContent = trackingID;
 };
-
 
 // Store loan details in localStorage
 function storeLoanDetails() {
@@ -50,13 +55,13 @@ function storeLoanDetails() {
 }
 
 function goToSecondPage() {
-  let pwaInstallPopup = document.getElementById('pwa-install-popup');
-  pwaInstallPopup.style.display = 'block';
+  let pwaInstallPopup = document.getElementById("pwa-install-popup");
+  pwaInstallPopup.style.display = "block";
   setTimeout(() => {
-             // if (!hasSeenInstallPrompt) {
-              window.location.href = 'Verification.html';
-              pwaInstallPopup.style.display = 'none';
-             // }
-          }, 3000);
+    // if (!hasSeenInstallPrompt) {
+    window.location.href = "Verification.html";
+    pwaInstallPopup.style.display = "none";
+    // }
+  }, 3000);
   //window.location.href = 'Verification.html';
 }
