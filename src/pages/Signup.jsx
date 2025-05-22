@@ -88,14 +88,16 @@ const Signup = ({ showToast }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Save additional information (name and phone) to localStorage
-    localStorage.setItem("name", name);
-    localStorage.setItem("phone", phone);
+  // Assume you have states: name, phone, password, etc.
+  localStorage.setItem('name', name);
+  localStorage.setItem('phone', phone);
 
+  navigate('/Appdet'); // or use appropriate path
     // Show toast after saving
     if (typeof showToast === "function") {
       console.log("Toast function exists. Showing toast...");
