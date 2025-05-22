@@ -111,8 +111,7 @@ const Verification = () => {
     message.includes("confirmed") &&
     message.includes("ksh") &&
     (message.includes("sent to") || message.includes("paid to") || message.includes("payment to")) &&
-    message.includes("gadgetcom ventures") && // ✅ Require exact business name
-    /\b\d{2,4}\/\d{2,4}\b/.test(message); // loose date check (e.g., 21/05/2025)
+    message.includes("gadgetcom ventures") // ✅ Require exact business name
 
   if (isValid) {
     setVerificationMessage("Payment verified successfully!");
@@ -120,7 +119,7 @@ const Verification = () => {
     setTimeout(() => {
       closeModal();
       navigate("/review");
-    }, 1000);
+    }, 3000);
   } else {
     setVerificationMessage(
       "Please paste the full and correct M-PESA confirmation message, including recipient 'GADGETCOM VENTURES'."

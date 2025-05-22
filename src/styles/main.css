@@ -2,7 +2,7 @@
 body {
   font-family: "Arial", sans-serif;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.559), rgba(157, 157, 157, 0.377)),
+    linear-gradient(rgba(255, 255, 255, 0.623), rgba(255, 255, 255, 0.61)),
     url("/bmage.jpg") no-repeat center center fixed;
   background-size: cover; /* Ensures the image fully covers the screen */
   margin: 0;
