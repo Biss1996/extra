@@ -1,0 +1,33 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto
+
+# Force LF for all JS/TS/HTML/CSS files
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Images treated as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+
+# Fonts
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+
+# Don't normalize Vite binary outputs or system files
+/dist/** binary
+/build/** binary
+
