@@ -1,50 +1,84 @@
-# Node.js
-node_modules/
+# Logs and debug
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
+report.*.json
 
-# Build output
+# Runtime and cache
+pids
+*.pid
+*.seed
+*.pid.lock
+.nyc_output
+.cache/
+.vite/
+.vite-cache/
+.parcel-cache
+.rpt2_cache/
+.rts2_cache_*/
+.eslintcache
+.stylelintcache
+.node_repl_history
+
+# Dependency directories
+node_modules/
+bower_components/
+jspm_packages/
+web_modules/
+.dynamodb/
+
+# Build outputs
 dist/
 build/
 .vite/
+.next/
+out/
+.nuxt/
+.vuepress/dist
+**/.vitepress/dist
 
-# Environment files
+# Environment
 .env
 .env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Vite cache
-.cache/
-.vite-cache/
+# TypeScript
+*.tsbuildinfo
 
-# IDE/editor configs
+# IDE/editor
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
+.tern-port
+.vscode-test
 
-# OS-specific files
+# OS files
 .DS_Store
 Thumbs.db
 
-# Optional logs/output
-*.log
+# Misc
+*.swp
+*.tmp
 *.tgz
+*.map
+*.local
 
-# Optional: lockfiles (keep if using one tool consistently)
+# Yarn v2+
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Optional lockfiles (uncomment if not using)
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
-
-# Coverage/test
-coverage/
-*.lcov
-
-# Misc
-*.local
-*.swp
-*.tmp
-
-# Static assets built by Vite
-*.map
