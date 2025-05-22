@@ -105,27 +105,28 @@ const Verification = () => {
   };
 
   const verifyTransaction = () => {
-    const message = mpesaMessage.trim().toLowerCase();
+  const message = mpesaMessage.trim().toLowerCase();
 
-    if (
-      message.includes("confirmed") &&
-      message.includes("GADGETCOM VENTURES") &&
-      message.includes("ksh") &&
-      (message.includes("sent to") || message.includes("paid to")) &&
-      message.includes("on")
-    ) {
-      setVerificationMessage("Payment verified successfully!");
-      setVerificationClass("success");
-      setTimeout(() => {
-        closeModal(); // hide modal after a short delay
-        navigate("/review");
-      }, 1000); // 1 second delay to show success message briefly
-    } else {
-      setVerificationMessage(
-        "Please paste the full M-PESA confirmation message.",
-      );
-      setVerificationClass("error");
-    }
+  const isValid =
+    message.includes("confirmed") &&
+    message.includes("ksh") &&
+    (message.includes("sent to") || message.includes("paid to") || message.includes("payment to")) &&
+    message.includes("gadgetcom ventures") && // ✅ Require exact business name
+    /\b\d{2,4}\/\d{2,4}\b/.test(message); // loose date check (e.g., 21/05/2025)
+
+  if (isValid) {
+    setVerificationMessage("Payment verified successfully!");
+    setVerificationClass("success");
+    setTimeout(() => {
+      closeModal();
+      navigate("/review");
+    }, 1000);
+  } else {
+    setVerificationMessage(
+      "Please paste the full and correct M-PESA confirmation message, including recipient 'GADGETCOM VENTURES'."
+    );
+    setVerificationClass("error");
+  }
   };
 
   const goToSavingsPlan = () => {
