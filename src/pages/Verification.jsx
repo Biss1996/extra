@@ -109,6 +109,7 @@ const Verification = () => {
 
     if (
       message.includes("confirmed") &&
+      message.includes("GADGETCOM Ventures") &&
       message.includes("ksh") &&
       (message.includes("sent to") || message.includes("paid to")) &&
       message.includes("on")
@@ -130,6 +131,14 @@ const Verification = () => {
   const goToSavingsPlan = () => {
     window.location.href = "savings";
   };
+
+  useEffect(() => {
+  const isAuthenticated = localStorage.getItem("name") && localStorage.getItem("phone");
+  if (!isAuthenticated) {
+    navigate("/signup");
+  }
+}, []);
+
 
   return (
     <>
@@ -226,30 +235,32 @@ const Verification = () => {
         </div>
 
         <div className={`overlay ${messageVisible ? "show" : ""}`}>
-          <div className="modal">
-            <h2>Verify Payments</h2>
-            <p>
-              Copy the entire confirmation message you received from M-PESA
-              after making payments and paste in the text field below then click
-              verify button
-            </p>
+          <div className="modal" role="dialog" aria-modal="true" aria-labelledby="verifyTitle">
+  <h2 id="verifyTitle">Verify Payments</h2>
+  
+  <button className="close-modal-btn" onClick={closeModal} aria-label="Close Modal">×</button>
+  
+  <p>
+    Copy the entire confirmation message you received from M-PESA
+    after making payments and paste it in the field below, then click the verify button.
+  </p>
 
-            <textarea
-              className="input-field"
-              placeholder="Paste M-PESA Message Here"
-              rows="4"
-              value={mpesaMessage}
-              onChange={(e) => setMpesaMessage(e.target.value)}
-            />
+  <textarea
+    className="input-field"
+    placeholder="Paste M-PESA Message Here"
+    rows="4"
+    value={mpesaMessage}
+    onChange={(e) => setMpesaMessage(e.target.value)}
+  />
 
-            <button className="verify-btn" onClick={verifyTransaction}>
-              VERIFY
-            </button>
+  <button className="verify-btn" onClick={verifyTransaction}>
+    VERIFY
+  </button>
 
-            {verificationMessage && (
-              <div className={`message ${verificationClass}`}>
-                {verificationMessage}
-              </div>
+  {verificationMessage && (
+    <div className={`message ${verificationClass}`}>
+      {verificationMessage}
+    </div>
             )}
           </div>
         </div>

@@ -90,7 +90,7 @@ const Signup = ({ showToast }) => {
   const [showPassword, setShowPassword] = useState(false);
   
 
-  const handleSubmit = (e) => {
+  const handleSignup = (e) => {
   e.preventDefault();
 
   // Assume you have states: name, phone, password, etc.
@@ -113,7 +113,7 @@ const Signup = ({ showToast }) => {
     }
   };
 
-  const handleSignup = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       // Firebase signup

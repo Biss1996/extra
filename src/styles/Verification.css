@@ -210,3 +210,21 @@ body {
     font-size: 14px;
   }
 }
+.close-modal-btn {
+  position: absolute;
+  top: 1px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.2s;
+}
+
+.close-modal-btn:hover {
+  color: #ff4444;
+}
+

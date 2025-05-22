@@ -60,8 +60,8 @@ const Appdet = () => {
   const [savingAmount, setSavingAmount] = useState(0);
   const [interest, setInterest] = useState(0);
   const [receivable, setReceivable] = useState(0);
-  const [name, setName] = useState('John Doe');
-  const [phone, setPhone] = useState();
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
 
 
 
