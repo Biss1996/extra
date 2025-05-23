@@ -113,35 +113,32 @@ const Signup = ({ showToast }) => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      // Firebase signup
-      await createUserWithEmailAndPassword(auth, email, password);
-      showToast("Signup successful!");
-      navigate("/otherdetails"); // Navigate to the next page after successful signup
-    } catch (error) {
-      showToast(error.message); // Show error if signup fails
-    }
-    if (!/^07\d{8}$/.test(phone)) {
-      alert("Please enter a valid Kenyan MPESA phone number starting with 07.");
-      return;
-    }
-    // Submit phone number to the backend or handle accordingly
-    console.log("Phone submitted:", phone);
-    const passwordValid = /^(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/.test(password);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!passwordValid) {
-      alert(
-        "Password must be at least 8 characters long and include a special character.",
-      );
-      return;
-    }
+  if (!/^07\d{8}$/.test(phone)) {
+    alert("Please enter a valid Kenyan MPESA phone number starting with 07.");
+    return;
+  }
 
-    // Submit the password or handle accordingly
-    console.log("Password submitted:", password);
-  };
+  const passwordValid = /^.{6,}$/.test(password);
+  if (!passwordValid) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
 
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    showToast("Signup successful!");
+    localStorage.setItem("name", name);
+    localStorage.setItem("phone", phone);
+    navigate("/otherdetails");
+  } catch (error) {
+    showToast(error.message);
+  }
+};
+
+  
   return (
     <>
       {/* PWA Install Popup */}
@@ -266,8 +263,8 @@ const Signup = ({ showToast }) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              minLength="8"
-              title="Password must be at least 8 characters long and include a special character"
+              minLength="6"
+              title="Password must be at least 6 characters long"
               style={{ paddingRight: "30px" }} // Add space for the eye icon
             />
 
