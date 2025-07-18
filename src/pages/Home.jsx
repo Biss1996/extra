@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 <Helmet>
   {/* Primary SEO */}
@@ -77,43 +78,18 @@ import { Helmet } from "react-helmet-async";
 const Home = ({ showToast }) => {
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    const interval = setInterval(showToast, 15000);
-    return () => clearInterval(interval);
+ useEffect(() => {
+    const interval = setInterval(showToast, 9000);
+    return () => clearInterval(interval); // clean up on unmount
   }, [showToast]);
 
   return (
     <div className="section">
       <header>
         <div className="header-content">
-          <img src="/chapaa.jpg" alt="INUA CHAPAA Logo" className="logo" />
-          <h2>INUA CHAPAA</h2>
-          <p>Quick, Safe, and Easy Mobile Loans</p>
-
-          <button
-            onClick={() => navigate("/signup")}
-            className="cta-button"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              background: "#00a651",
-              padding: "10px 20px",
-              border: "none",
-              borderRadius: "30px",
-              color: "#fff",
-              fontWeight: "bold",
-              cursor: "pointer",
-              marginTop: "20px",
-            }}
-          >
-            <img
-              src="/play1.jpeg"
-              alt="Download from Play Store"
-              style={{ width: "24px", height: "24px" }}
-            />
-            Download App
-          </button>
+          <h3><strong>INUA</strong></h3>
+          <h3><strong>CHAPAA</strong></h3>
+          <p><strong>Quick, Safe, and Easy Mobile Loan</strong></p>
         </div>
       </header>
 
