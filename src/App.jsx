@@ -105,6 +105,11 @@ const showToast = () => {
   }).showToast();
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  showToast();
+});
+
+
 export default function App() {
   return (
     <Router>
