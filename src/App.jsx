@@ -92,7 +92,7 @@ const showToast = () => {
     gravity: "top",
     position: "right",
     style: {
-      background: "#013e0bb0",
+      background: "#013e0be0",
       color: "#fff",
       fontSize: "15px",
       fontWeight: "500",
