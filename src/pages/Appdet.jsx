@@ -89,13 +89,13 @@ if (storedPhone) setPhone(storedPhone);
       s = 300;
     } else if (lims >= 6000) {
       f = 248;
-      s = 220;
+      s = 250;
     } else if (lims >= 4000) {
       f = 198;
-      s = 170;
+      s = 200;
     } else if (lims <= 3500) {
       f = 156;
-      s = 120;
+      s = 170;
     }
     setFee(f);
     setSavingAmount(s);

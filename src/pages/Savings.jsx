@@ -27,9 +27,9 @@ const Savings = ({ showToast }) => {
     };
 
     const savingsPlans = [
-      { savings: 150, limit: getRandom(2500, 3500) },
-      { savings: 170, limit: getRandom(4000, 5000) },
-      { savings: 220, limit: getRandom(6000, 7000) },
+      { savings: 170, limit: getRandom(2500, 3500) },
+      { savings: 200, limit: getRandom(4000, 5000) },
+      { savings: 250, limit: getRandom(6000, 7000) },
       { savings: 300, limit: getRandom(7000, 10000) },
       { savings: 450, limit: getRandom(10000, 14000) },
       { savings: 950, limit: getRandom(14000, 19000) },
