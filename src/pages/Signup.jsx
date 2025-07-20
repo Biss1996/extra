@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { useNavigate } from "react-router-dom";
 import "../styles/Signup.css";
 import "../styles/shared.css";
@@ -8,75 +7,55 @@ import "toastify-js/src/toastify.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase"; // Ensure this imports your Firebase setup correctly
 
-
-
-
 const Signup = ({ showToast }) => {
   const navigate = useNavigate();
 
-   // Show a new toast every 7 seconds
   useEffect(() => {
     const interval = setInterval(showToast, 7000);
-    return () => clearInterval(interval); // clean up on unmount
+    return () => clearInterval(interval);
   }, [showToast]);
 
-  // Define state variables for form fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  
 
-  const handleSignup = (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  // Assume you have states: name, phone, password, etc.
-  localStorage.setItem('name', name);
-  localStorage.setItem('phone', phone);
+    // Accept 07 or 01 Kenyan numbers, 10 digits
+    if (!/^0(7|1)\d{8}$/.test(phone)) {
+      alert("Please enter a valid Kenyan MPESA phone number starting with 07 or 01.");
+      return;
+    }
 
-  navigate('/Appdet'); // or use appropriate path
-    // Show toast after saving
-    if (typeof showToast === "function") {
-      console.log("Toast function exists. Showing toast...");
-      showToast();
+    const formattedPhone = "254" + phone.slice(1);
 
-      // Wait briefly so toast has time to show
-      setTimeout(() => {
-        navigate("/otherdetails");
-      }, 200); // 200ms delay is usually enough
-    } else {
-      console.log("Toast function not passed!");
+    if (!/^.{6,}$/.test(password)) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      localStorage.setItem("name", name);
+      localStorage.setItem("phone", formattedPhone);
+
+      if (typeof showToast === "function") {
+        showToast("Signup successful!");
+      }
+
       navigate("/otherdetails");
+    } catch (error) {
+      if (typeof showToast === "function") {
+        showToast(error.message);
+      } else {
+        alert(error.message);
+      }
     }
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  if (!/^07\d{8}$/.test(phone)) {
-    alert("Please enter a valid Kenyan MPESA phone number starting with 07.");
-    return;
-  }
-
-  const passwordValid = /^.{6,}$/.test(password);
-  if (!passwordValid) {
-    alert("Password must be at least 6 characters long.");
-    return;
-  }
-
-  try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    showToast("Signup successful!");
-    localStorage.setItem("name", name);
-    localStorage.setItem("phone", phone);
-    navigate("/otherdetails");
-  } catch (error) {
-    showToast(error.message);
-  }
-};
-
-  
   return (
     <>
       {/* PWA Install Popup */}
@@ -92,7 +71,7 @@ const Signup = ({ showToast }) => {
         </div>
       </div>
 
-      {/* Preloader Section */}
+      {/* Preloader */}
       <div
         className="preloader"
         id="preloader"
@@ -121,14 +100,13 @@ const Signup = ({ showToast }) => {
           <h1>Find Your Loan Eligibility</h1>
           <h3>We offer loans from Ksh. 2,000 - 50,000 loan to MPESA</h3>
 
-          <form id="loanForm" onSubmit={handleSignup}>
-            {/* Fields for user to input information */}
+          <form id="loanForm" onSubmit={handleSubmit}>
             <input
               type="text"
               id="names"
               placeholder="Your Name"
               value={name}
-              onChange={(e) => setName(e.target.value)} // Update name state
+              onChange={(e) => setName(e.target.value)}
               required
             />
             <select id="county" required>
@@ -191,8 +169,8 @@ const Signup = ({ showToast }) => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
-              pattern="^07\d{8}$" // Validates Kenyan phone numbers starting with '07' and 10 digits long
-              title="Enter a valid Kenyan phone number starting with 07"
+              pattern="^0(7|1)\d{8}$"
+              title="Enter a valid Kenyan phone number starting with 07 or 01"
             />
             <input
               type={showPassword ? "text" : "password"}
@@ -203,14 +181,13 @@ const Signup = ({ showToast }) => {
               required
               minLength="6"
               title="Password must be at least 6 characters long"
-              style={{ paddingRight: "30px" }} // Add space for the eye icon
+              style={{ paddingRight: "30px" }}
             />
-
             <input
               type="email"
               placeholder="Email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} // Update email state
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <input
