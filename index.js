@@ -7,12 +7,10 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
   hamburger.classList.toggle("open"); // Toggle hamburger icon animation
 });
+
 if (localStorage.getItem("lnapplied") === "true") {
-  //localStorage.clear();
   window.location.href = "reviewpage.html";
 } else if (localStorage.getItem("visited") === "true") {
-  // Redirect to second page
-  //localStorage.clear();
   window.location.href = "upplication-details.html";
 }
 
@@ -42,9 +40,9 @@ function formatPhoneNumber(phone, country) {
   let formattedPhone = phone.replace(/^\+/, ""); // Remove any leading "+"
 
   if (formattedPhone.startsWith("0")) {
-    formattedPhone = countryCode + formattedPhone.slice(1); // Replace leading "0" with country code
+    formattedPhone = countryCode + formattedPhone.slice(1); // Replace leading "0"
   } else if (!formattedPhone.startsWith(countryCode)) {
-    formattedPhone = countryCode + formattedPhone; // Add country code if not present
+    formattedPhone = countryCode + formattedPhone; // Add country code if missing
   }
   return formattedPhone;
 }
@@ -66,25 +64,31 @@ document.getElementById("loanForm").addEventListener("submit", function (e) {
     return;
   }
 
-  // Format phone number based on selected country
-  //const formattedPhone = formatPhoneNumber(phone, selectedCountry);
+  // Optional: Basic phone validation allowing 01, 07, etc.
+  const phoneRegex = /^0[1-9]\d{7,}$/;
+  if (!phoneRegex.test(phone)) {
+    alert("Please enter a valid phone number starting with 0 and 9 digits.");
+    return;
+  }
+
+  // Format and store phone number
+  const formattedPhone = formatPhoneNumber(phone, selectedCountry);
 
   // Store values in localStorage
   localStorage.setItem("name", name);
-  localStorage.setItem("phone", phone);
+  localStorage.setItem("phone", formattedPhone);
   localStorage.setItem("idNumber", idNumber);
   localStorage.setItem("loanType", loanType);
   localStorage.setItem("country", selectedCountry);
   localStorage.setItem("visited", "true");
 
-  // Redirect to loan details page
+  // Show PWA popup and redirect
   let pwaInstallPopup = document.getElementById("pwa-install-popup");
   pwaInstallPopup.style.display = "block";
   setTimeout(() => {
-    // if (!hasSeenInstallPrompt) {
     window.location.href = "otherdetails.html";
     pwaInstallPopup.style.display = "none";
-    // }
   }, 5000);
-  console.log("********");
+
+  console.log("Form submitted successfully");
 });
