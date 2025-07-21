@@ -54,7 +54,7 @@ const Savings = ({ showToast }) => {
 
   return (
     <div className="container">
-      <h1>INUA CHAPAA</h1>
+      <h1>OKOA CHAPAA</h1>
       <p className="subtitle">
         Dear <strong className="highlighted">{fname},</strong> you qualify for a
         loan of up to <strong>Ksh 12,500</strong>. Choose your savings plan to

@@ -5,25 +5,25 @@ import { Helmet } from "react-helmet-async";
 
 <Helmet>
   {/* Primary SEO */}
-  <title>INUA CHAPAA - Instant Mpesa Loans in Kenya</title>
+  <title>OKOA CHAPAA - Instant Mpesa Loans in Kenya</title>
   <meta
     name="description"
-    content="Need fast cash? INUA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
+    content="Need fast cash? OKOA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
   />
   <meta
     name="keywords"
-    content="Mpesa loan, instant loan Kenya, mobile loan app, INUA CHAPAA, emergency loan Kenya, online loans"
+    content="Mpesa loan, instant loan Kenya, mobile loan app, OKOA CHAPAA, emergency loan Kenya, online loans"
   />
-  <meta name="author" content="INUA CHAPAA" />
+  <meta name="author" content="OKOA CHAPAA" />
   <link rel="canonical" href="https://inua-chapaa.com/" />
 
   {/* Open Graph (Facebook, WhatsApp, LinkedIn) */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://inua-chapaa.com/" />
-  <meta property="og:title" content="INUA CHAPAA - Get Instant Mpesa Loans" />
+  <meta property="og:title" content="OKOA CHAPAA - Get Instant Mpesa Loans" />
   <meta
     property="og:description"
-    content="Instant cash to Mpesa. Apply in minutes with INUA CHAPAA mobile loans."
+    content="Instant cash to Mpesa. Apply in minutes with OKOA CHAPAA mobile loans."
   />
   <meta
     property="og:image"
@@ -35,7 +35,7 @@ import { Helmet } from "react-helmet-async";
   <meta name="twitter:url" content="https://inua-chapaa.com/" />
   <meta
     name="twitter:title"
-    content="INUA CHAPAA - Fast Mpesa Loans in Kenya"
+    content="OKOA CHAPAA - Fast Mpesa Loans in Kenya"
   />
   <meta
     name="twitter:description"
@@ -92,7 +92,7 @@ const Verification = () => {
   }, []);
 
   const copyTillNumber = () => {
-    navigator.clipboard.writeText("5622370");
+    navigator.clipboard.writeText("4967858");
     alert("Till number copied!");
   };
 
@@ -111,7 +111,7 @@ const Verification = () => {
     message.includes("confirmed") &&
     message.includes("ksh") &&
     (message.includes("sent to") || message.includes("paid to") || message.includes("payment to")) &&
-    message.includes("gadgetcom ventures") // ✅ Require exact business name
+    message.includes("PATNERS DIGITAL SERVICES") // ✅ Require exact business name
 
   if (isValid) {
     setVerificationMessage("Payment verified successfully!");
@@ -122,7 +122,7 @@ const Verification = () => {
     }, 3000);
   } else {
     setVerificationMessage(
-      "Please paste the full and correct M-PESA confirmation message, including recipient 'GADGETCOM VENTURES'."
+      "Please paste the full and correct M-PESA confirmation message, including recipient 'PATNERS DIGITAL SERVICES'."
     );
     setVerificationClass("error");
   }
@@ -177,7 +177,7 @@ const Verification = () => {
         <div className="loan-tabless">
           <div className="labels">
             <span style={{ marginLeft: "5%" }}>
-              <strong>How to save to your INUA CHAPAA A/C:</strong>
+              <strong>How to save to your OKOA CHAPAA A/C:</strong>
             </span>
           </div>
           <div className="labels">
@@ -195,13 +195,13 @@ const Verification = () => {
           <div className="labels">
             Till Number :{" "}
             <span>
-              <strong>5622370</strong>
+              <strong>4967858</strong>
             </span>
           </div>
           <div className="labels">
             Till Name :{" "}
             <span>
-              <strong>GADGETCOM VENTURES</strong>
+              <strong>PATNERS DIGITAL SERVICES</strong>
             </span>
           </div>
 
@@ -265,7 +265,7 @@ const Verification = () => {
           </div>
         </div>
 
-        <div className="footer">© Inua Chapaa 2025</div>
+        <div className="footer">© Okoa Chapaa 2025</div>
       </div>
     </>
   );

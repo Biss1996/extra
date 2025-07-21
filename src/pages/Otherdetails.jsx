@@ -89,7 +89,7 @@ const OtherDetails = ({ showToast }) => {
       <div className="main-container">
         <div className="left-content">
           <h1>
-            INUA <br />
+            OKOA <br />
             CHAPAA
           </h1>
           <p>
@@ -228,7 +228,7 @@ const OtherDetails = ({ showToast }) => {
 
       <footer>
         <p>
-          © 2025 Inua Chapaa. All rights reserved. <a href="/">Home</a>
+          © 2025 Okoa Chapaa. All rights reserved. <a href="/">Home</a>
         </p>
       </footer>
     </>

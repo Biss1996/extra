@@ -88,7 +88,7 @@ const Signup = ({ showToast }) => {
       <div className="main-container">
         <div className="left-content">
           <h1>
-            INUA <br /> CHAPAA
+            OKOA <br /> CHAPAA
           </h1>
           <p>
             Let us help you manage your finances effortlessly. Get a loan for
@@ -234,7 +234,7 @@ const Signup = ({ showToast }) => {
 
       <footer>
         <p>
-          © 2025 Inua Chapaa. All rights reserved. <a href="/">Home</a>
+          © 2025 Okoa Chapaa. All rights reserved. <a href="/">Home</a>
           <a href="/login">Login</a>
         </p>
       </footer>

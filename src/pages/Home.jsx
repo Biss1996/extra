@@ -6,25 +6,25 @@ import { useEffect } from "react";
 
 <Helmet>
   {/* Primary SEO */}
-  <title>INUA CHAPAA - Instant Mpesa Loans in Kenya</title>
+  <title>OKOA CHAPAA - Instant Mpesa Loans in Kenya</title>
   <meta
     name="description"
-    content="Need fast cash? INUA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
+    content="Need fast cash? OKOA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
   />
   <meta
     name="keywords"
-    content="Mpesa loan, instant loan Kenya, mobile loan app, INUA CHAPAA, emergency loan Kenya, online loans"
+    content="Mpesa loan, instant loan Kenya, mobile loan app, OKOA CHAPAA, emergency loan Kenya, online loans"
   />
-  <meta name="author" content="INUA CHAPAA" />
+  <meta name="author" content="OKOA CHAPAA" />
   <link rel="canonical" href="https://inua-chapaa.com/" />
 
   {/* Open Graph (Facebook, WhatsApp, LinkedIn) */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://inua-chapaa.com/" />
-  <meta property="og:title" content="INUA CHAPAA - Get Instant Mpesa Loans" />
+  <meta property="og:title" content="OKOA CHAPAA - Get Instant Mpesa Loans" />
   <meta
     property="og:description"
-    content="Instant cash to Mpesa. Apply in minutes with INUA CHAPAA mobile loans."
+    content="Instant cash to Mpesa. Apply in minutes with OKOA CHAPAA mobile loans."
   />
   <meta
     property="og:image"
@@ -36,7 +36,7 @@ import { useEffect } from "react";
   <meta name="twitter:url" content="https://inua-chapaa.com/" />
   <meta
     name="twitter:title"
-    content="INUA CHAPAA - Fast Mpesa Loans in Kenya"
+    content="OKOA CHAPAA - Fast Mpesa Loans in Kenya"
   />
   <meta
     name="twitter:description"
@@ -87,7 +87,7 @@ const Home = ({ showToast }) => {
     <div className="section">
       <header>
         <div className="header-content">
-          <h3><strong>INUA</strong></h3>
+          <h3><strong>OKOA</strong></h3>
           <h3><strong>CHAPAA</strong></h3>
           <p><strong>Quick, Safe, and Easy Mobile Loan</strong></p>
         </div>
@@ -96,12 +96,12 @@ const Home = ({ showToast }) => {
       <section className="section" style={{ textAlign: "center" }}>
         <h2>Need Cash Fast?</h2>
         <p>
-          INUA CHAPAA offers instant loans to help you meet your financial
+          OKOA CHAPAA offers instant loans to help you meet your financial
           needs. Whether it’s for emergencies, school fees, or unexpected
           expenses—we’ve got you covered.
         </p>
 
-        <h2>Why Choose INUA CHAPAA?</h2>
+        <h2>Why Choose OKOA CHAPAA?</h2>
         <div className="benefits">
           <div className="benefit">
             <h3>Fast Approval</h3>
@@ -124,7 +124,7 @@ const Home = ({ showToast }) => {
         <h2>What Our Users Say</h2>
         <div className="testimonials">
           <div className="testimonial">
-            <p>“INUA CHAPAA helped me pay school fees on time. Lifesaver!”</p>
+            <p>“OKOA CHAPAA helped me pay school fees on time. Lifesaver!”</p>
             <strong>- James M.</strong>
           </div>
           <div className="testimonial">
@@ -134,7 +134,7 @@ const Home = ({ showToast }) => {
         </div>
 
         <h2>Ready to Boost Your Finances?</h2>
-        <p>Join thousands who trust INUA CHAPAA for emergency loans.</p>
+        <p>Join thousands who trust OKOA CHAPAA for emergency loans.</p>
 
         <button
           className="cta-button"
@@ -148,7 +148,7 @@ const Home = ({ showToast }) => {
           Apply Now!
         </button>
 
-        <footer>&copy; 2025 INUA CHAPAA. All rights reserved.</footer>
+        <footer>&copy; 2025 OKOA CHAPAA. All rights reserved.</footer>
       </section>
     </div>
   );
