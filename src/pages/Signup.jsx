@@ -179,8 +179,8 @@ const Signup = ({ showToast }) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              minLength="6"
-              title="Password must be at least 6 characters long"
+              minLength="4"
+              title="Password must be at least 4 characters long"
               style={{ paddingRight: "30px" }}
             />
             <input
