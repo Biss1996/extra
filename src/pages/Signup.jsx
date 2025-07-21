@@ -32,8 +32,8 @@ const Signup = ({ showToast }) => {
 
     const formattedPhone = "254" + phone.slice(1);
 
-    if (!/^.{6,}$/.test(password)) {
-      alert("Password must be at least 6 characters long.");
+    if (!/^.{4,}$/.test(password)) {
+      alert("Password must be at least 4 characters long.");
       return;
     }
 

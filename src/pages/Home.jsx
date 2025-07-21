@@ -79,7 +79,7 @@ const Home = ({ showToast }) => {
   const navigate = useNavigate();
 
  useEffect(() => {
-    const interval = setInterval(showToast, 9000);
+    const interval = setInterval(showToast, 7000);
     return () => clearInterval(interval); // clean up on unmount
   }, [showToast]);
 
