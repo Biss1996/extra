@@ -4,8 +4,6 @@ import "../styles/Signup.css";
 import "../styles/shared.css";
 import "../styles/main.css";
 import "toastify-js/src/toastify.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase"; // Ensure this imports your Firebase setup correctly
 
 const Signup = ({ showToast }) => {
   const navigate = useNavigate();
@@ -234,7 +232,7 @@ const Signup = ({ showToast }) => {
 
       <footer>
         <p>
-          © 2025 Okoa Chapaa. All rights reserved. <a href="/">Home</a>
+          © 2025 OKOA EXTRA. All rights reserved. <a href="/">Home</a>
           <a href="/login">Login</a>
         </p>
       </footer>

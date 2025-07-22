@@ -228,7 +228,7 @@ const OtherDetails = ({ showToast }) => {
 
       <footer>
         <p>
-          © 2025 Okoa Chapaa. All rights reserved. <a href="/">Home</a>
+          © 2025 Okoa Extra. All rights reserved. <a href="/">Home</a>
         </p>
       </footer>
     </>

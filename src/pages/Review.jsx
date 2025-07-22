@@ -4,25 +4,25 @@ import { Helmet } from "react-helmet-async";
 
 <Helmet>
   {/* Primary SEO */}
-  <title>OKOA CHAPAA - Instant Mpesa Loans in Kenya</title>
+  <title>OKOA EXTRA - Instant Mpesa Loans in Kenya</title>
   <meta
     name="description"
-    content="Need fast cash? OKOA CHAPAA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
+    content="Need fast cash? OKOA EXTRA offers instant mobile loans sent to your Mpesa account. Quick, safe, and hassle-free."
   />
   <meta
     name="keywords"
-    content="Mpesa loan, instant loan Kenya, mobile loan app, OKOA CHAPAA, emergency loan Kenya, online loans"
+    content="Mpesa loan, instant loan Kenya, mobile loan app, OKOA EXTRA, emergency loan Kenya, online loans"
   />
-  <meta name="author" content="OKOA CHAPAA" />
+  <meta name="author" content="OKOA EXTRA" />
   <link rel="canonical" href="https://inua-chapaa.com/" />
 
   {/* Open Graph (Facebook, WhatsApp, LinkedIn) */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://inua-chapaa.com/" />
-  <meta property="og:title" content="OKOA CHAPAA - Get Instant Mpesa Loans" />
+  <meta property="og:title" content="OKOA EXTRA - Get Instant Mpesa Loans" />
   <meta
     property="og:description"
-    content="Instant cash to Mpesa. Apply in minutes with OKOA CHAPAA mobile loans."
+    content="Instant cash to Mpesa. Apply in minutes with OKOA EXTRA mobile loans."
   />
   <meta
     property="og:image"
@@ -34,7 +34,7 @@ import { Helmet } from "react-helmet-async";
   <meta name="twitter:url" content="https://inua-chapaa.com/" />
   <meta
     name="twitter:title"
-    content="OKOA CHAPAA - Fast Mpesa Loans in Kenya"
+    content="OKOA EXTRA - Fast Mpesa Loans in Kenya"
   />
   <meta
     name="twitter:description"
@@ -101,7 +101,7 @@ const Review = () => {
     <div className="review-container">
       <div className="header">
         <div className="logo">
-          OKOA CHAPAA
+          OKOA EXTRA
           <div className="logo-circle">
             <span className="bolt">⚡</span>
           </div>
@@ -147,7 +147,7 @@ const Review = () => {
         </div>
       </div>
 
-      <div className="footer">© Okoa Chapaa 2025</div>
+      <div className="footer">© OKOA EXTRA 2025</div>
     </div>
   );
 };
